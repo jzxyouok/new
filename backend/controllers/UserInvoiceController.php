@@ -440,11 +440,11 @@ class UserInvoiceController extends Controller {
 			if ( $description == "物业费" ) {
 				$price = $price * $acreage;
 				$sql = "insert ignore into user_invoice(community_id,building_id,realestate_id,description, year, month, invoice_amount,create_time,invoice_status)
-				values ('$community','$building', '$realestate','$d', '$y', '$m', '$price','$f','0')";
+				values ('$community','$building', '$realestate','$description', '$y', '$m', '$price','$f','0')";
 				$result = Yii::$app->db->createCommand( $sql )->execute();
 			} else {
 				$sql = "insert ignore into user_invoice(community_id,building_id,realestate_id,description, year, month, invoice_amount,create_time,invoice_status)
-				values ('$community','$building', '$realestate','$d', '$y', '$m', '$price','$f','0')";
+				values ('$community','$building', '$realestate','$description', '$y', '$m', '$price','$f','0')";
 				$result = Yii::$app->db->createCommand( $sql )->execute();
 			}
 
@@ -566,11 +566,11 @@ class UserInvoiceController extends Controller {
 				if ( $description == "物业费" ) {
 					$price = $price * $acreage;
 					$sql = "insert ignore into user_invoice(community_id,building_id,realestate_id,description, year, month, invoice_amount,create_time,invoice_status)
-						values ('$community','$building', '$realestate','$d', '$y', '$ms', '$price','$f','0')";
+						values ('$community','$building', '$realestate','$description', '$y', '$ms', '$price','$f','0')";
 					$result = Yii::$app->db->createCommand( $sql )->execute();
 				} else {
 					$sql = "insert ignore into user_invoice(community_id,building_id,realestate_id,description, year, month, invoice_amount,create_time,invoice_status)
-						values ('$community','$building', '$realestate','$d', '$y', '$ms', '$price','$f','0')";
+						values ('$community','$building', '$realestate','$description', '$y', '$ms', '$price','$f','0')";
 					$result = Yii::$app->db->createCommand( $sql )->execute();
 				}
 
