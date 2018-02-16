@@ -56,6 +56,11 @@ return [
 	            '<controller:(post|comment)>s' => '<controller>/list',
 	         ]
 	    ],
-    ],
+		
+    ],'modules' => [
+            'gridview' =>  [
+                'class' => '\kartik\grid\Module'
+            ]
+        ],
     'params' => $params,
 ];

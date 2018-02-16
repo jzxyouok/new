@@ -1,0 +1,261 @@
+2018-02-16 20:01:23 [127.0.0.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Connection.php:685
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Connection.php(685): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Connection.php(611): yii\db\Connection->createPdoInstance()
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Connection.php(994): yii\db\Connection->open()
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Connection.php(981): yii\db\Connection->getMasterPdo()
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php(462): yii\db\Connection->getSlavePdo()
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Connection.php(879): yii\db\Schema->quoteValue('\xE9\x87\x91\xE5\xBA\xA7\xE5\xB0\x8F\xE5\x8C\xBA')
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->quoteValue('\xE9\x87\x91\xE5\xBA\xA7\xE5\xB0\x8F\xE5\x8C\xBA')
+#7 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->getRawSql()
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1114): yii\db\Command->logQuery('yii\\db\\Command:...')
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(409): yii\db\Command->queryInternal('fetch', NULL)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Query.php(271): yii\db\Command->queryOne()
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveQuery.php(292): yii\db\Query->one(NULL)
+#12 C:\Apache24\htdocs\new\backend\models\User.php(113): yii\db\ActiveQuery->one()
+#13 C:\Apache24\htdocs\new\backend\models\LoginForm.php(84): app\models\User::findByUsername('\xE9\x87\x91\xE5\xBA\xA7\xE5\xB0\x8F\xE5\x8C\xBA')
+#14 C:\Apache24\htdocs\new\backend\models\LoginForm.php(55): app\models\LoginForm->getUser()
+#15 [internal function]: app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator))
+#16 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\validators\InlineValidator.php(72): call_user_func(Array, 'password', NULL, Object(yii\validators\InlineValidator))
+#17 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\validators\Validator.php(267): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#18 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#19 C:\Apache24\htdocs\new\backend\models\LoginForm.php(69): yii\base\Model->validate()
+#20 C:\Apache24\htdocs\new\backend\controllers\LoginController.php(22): app\models\LoginForm->login()
+#21 [internal function]: backend\controllers\LoginController->actionIndex()
+#22 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#23 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#24 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#25 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('login', Array)
+#26 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Connection.php:622
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Connection.php(994): yii\db\Connection->open()
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Connection.php(981): yii\db\Connection->getMasterPdo()
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php(462): yii\db\Connection->getSlavePdo()
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Connection.php(879): yii\db\Schema->quoteValue('\xE9\x87\x91\xE5\xBA\xA7\xE5\xB0\x8F\xE5\x8C\xBA')
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->quoteValue('\xE9\x87\x91\xE5\xBA\xA7\xE5\xB0\x8F\xE5\x8C\xBA')
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->getRawSql()
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1114): yii\db\Command->logQuery('yii\\db\\Command:...')
+#7 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(409): yii\db\Command->queryInternal('fetch', NULL)
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Query.php(271): yii\db\Command->queryOne()
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveQuery.php(292): yii\db\Query->one(NULL)
+#10 C:\Apache24\htdocs\new\backend\models\User.php(113): yii\db\ActiveQuery->one()
+#11 C:\Apache24\htdocs\new\backend\models\LoginForm.php(84): app\models\User::findByUsername('\xE9\x87\x91\xE5\xBA\xA7\xE5\xB0\x8F\xE5\x8C\xBA')
+#12 C:\Apache24\htdocs\new\backend\models\LoginForm.php(55): app\models\LoginForm->getUser()
+#13 [internal function]: app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator))
+#14 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\validators\InlineValidator.php(72): call_user_func(Array, 'password', NULL, Object(yii\validators\InlineValidator))
+#15 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\validators\Validator.php(267): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#16 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#17 C:\Apache24\htdocs\new\backend\models\LoginForm.php(69): yii\base\Model->validate()
+#18 C:\Apache24\htdocs\new\backend\controllers\LoginController.php(22): app\models\LoginForm->login()
+#19 [internal function]: backend\controllers\LoginController->actionIndex()
+#20 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#21 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#22 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#23 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('login', Array)
+#24 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#26 {main}
+Additional Information:
+
+2018-02-16 20:01:23 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => '9-XBnBmPCCIBxFyeYPXbm1maTBIrWXYHaUpnIpffdFS2h6P_TP1FbkeXbPczu4KuNa0jRHQoQUkcIBMQ764_Zw=='
+    'LoginForm' => [
+        'name' => '金座小区'
+        'password' => '123456'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'f8d0267a616ec5744f5ad89eb2ab6b636225c1c648c754018a8c6bf941ea94d7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rUh-MAfZMhLvTyNWrs-ymcL43k3IW9BF\";}'
+    'PHPSESSID' => 'ol7ealr5n94mme8q4bb8337ehe'
+    '_identity' => 'a28f48d964f4bcc76b07959580d949bbb19398ee0e5c852c62cdd6fb3affd146a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"101\",null,900]\";}'
+    '_csrf-backend' => 'e570645bea7e8aef180c142ffdfca60f97273cf0c5eaa0267a62182b4a30e1e9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"AbbcUrMLFS0iSNY5l7oV_q7Nujt2xqK3\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'login'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wuye.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://wuye.com/login'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '264'
+    'HTTP_COOKIE' => '_csrf=f8d0267a616ec5744f5ad89eb2ab6b636225c1c648c754018a8c6bf941ea94d7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rUh-MAfZMhLvTyNWrs-ymcL43k3IW9BF%22%3B%7D; PHPSESSID=ol7ealr5n94mme8q4bb8337ehe; _identity=a28f48d964f4bcc76b07959580d949bbb19398ee0e5c852c62cdd6fb3affd146a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%22101%22%2Cnull%2C900%5D%22%3B%7D; _csrf-backend=e570645bea7e8aef180c142ffdfca60f97273cf0c5eaa0267a62182b4a30e1e9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22AbbcUrMLFS0iSNY5l7oV_q7Nujt2xqK3%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '\"C:\\php;\";C:\\php;C:\\Users\\zd\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\zd\\AppData\\Local\\GitHubDesktop\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.2.2'
+    'SERVER_NAME' => 'wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '52555'
+    'REDIRECT_URL' => '/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1518782483.276
+    'REQUEST_TIME' => 1518782483
+]
+2018-02-16 20:02:40 [127.0.0.1][101][0tibrjb0n2aobr33ienm1vmh07][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The 'gridview' module MUST be setup in your Yii configuration file. in C:\Apache24\htdocs\new\vendor\kartik-v\yii2-krajee-base\Config.php:288
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\kartik-v\yii2-grid\GridView.php(1313): kartik\base\Config::getModule('gridview', 'kartik\\grid\\Mod...')
+#1 C:\Apache24\htdocs\new\vendor\kartik-v\yii2-grid\GridView.php(970): kartik\grid\GridView->initModule()
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\BaseObject.php(109): kartik\grid\GridView->init()
+#3 [internal function]: yii\base\BaseObject->__construct(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('kartik\\grid\\Gri...', Array, Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('kartik\\grid\\Gri...', Array, Array)
+#7 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Widget.php(137): yii\BaseYii::createObject(Array)
+#8 C:\Apache24\htdocs\new\backend\views\order\index.php(249): yii\base\Widget::widget(Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(336): require('C:\\Apache24\\htd...')
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Apache24\\htd...', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Apache24\\htd...', Array, Object(backend\controllers\OrderController))
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\OrderController))
+#13 C:\Apache24\htdocs\new\backend\controllers\OrderController.php(60): yii\base\Controller->render('index', Array)
+#14 [internal function]: backend\controllers\OrderController->actionIndex()
+#15 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#18 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('order/index', Array)
+#19 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#21 {main}
+2018-02-16 20:02:36 [127.0.0.1][101][0tibrjb0n2aobr33ienm1vmh07][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'f8d0267a616ec5744f5ad89eb2ab6b636225c1c648c754018a8c6bf941ea94d7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rUh-MAfZMhLvTyNWrs-ymcL43k3IW9BF\";}'
+    'PHPSESSID' => 'ol7ealr5n94mme8q4bb8337ehe'
+    '_identity' => 'a28f48d964f4bcc76b07959580d949bbb19398ee0e5c852c62cdd6fb3affd146a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"101\",null,900]\";}'
+    '_csrf-backend' => '5a61a78ab2291ca9cdd7779c0a3db7a19d46e00a478241c3909473da844b3080a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"CbgNK67ULByJBnlz9CRKaaqe2kJPEWJh\";}'
+    'advanced-backend' => '0tibrjb0n2aobr33ienm1vmh07'
+    '_identity-backend' => '99cbb6cadf97570cce7bd695f2289c5756ccefa828b379fa5ad81d296f61299ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:16:\"[\"101\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '101'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 101
+            'company' => 0
+            'community' => 22
+            'real_name' => '金座小区'
+            'name' => '金座小区'
+            'role' => 11
+            'phone' => null
+            'password' => '217IV4lPPs95qxtTbcQDzg=='
+            'status' => 1
+            'comment' => '用于账单导入、前台收费'
+            'salt' => 'b4e472f7ab23e71d74dfbf12ca53d19e'
+            'create_id' => 64
+            'create_time' => '2016-08-06 10:43:21'
+            'update_time' => '2016-09-06 18:43:08'
+            'update_id' => 64
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 101
+            'company' => 0
+            'community' => 22
+            'real_name' => '金座小区'
+            'name' => '金座小区'
+            'role' => 11
+            'phone' => null
+            'password' => '217IV4lPPs95qxtTbcQDzg=='
+            'status' => 1
+            'comment' => '用于账单导入、前台收费'
+            'salt' => 'b4e472f7ab23e71d74dfbf12ca53d19e'
+            'create_id' => 64
+            'create_time' => '2016-08-06 10:43:21'
+            'update_time' => '2016-09-06 18:43:08'
+            'update_id' => 64
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'order/index'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wuye.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://wuye.com/'
+    'HTTP_COOKIE' => '_csrf=f8d0267a616ec5744f5ad89eb2ab6b636225c1c648c754018a8c6bf941ea94d7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rUh-MAfZMhLvTyNWrs-ymcL43k3IW9BF%22%3B%7D; PHPSESSID=ol7ealr5n94mme8q4bb8337ehe; _identity=a28f48d964f4bcc76b07959580d949bbb19398ee0e5c852c62cdd6fb3affd146a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%22101%22%2Cnull%2C900%5D%22%3B%7D; _csrf-backend=5a61a78ab2291ca9cdd7779c0a3db7a19d46e00a478241c3909473da844b3080a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22CbgNK67ULByJBnlz9CRKaaqe2kJPEWJh%22%3B%7D; advanced-backend=0tibrjb0n2aobr33ienm1vmh07; _identity-backend=99cbb6cadf97570cce7bd695f2289c5756ccefa828b379fa5ad81d296f61299ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A16%3A%22%5B%22101%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '\"C:\\php;\";C:\\php;C:\\Users\\zd\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\zd\\AppData\\Local\\GitHubDesktop\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\composer;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.2.2'
+    'SERVER_NAME' => 'wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '52579'
+    'REDIRECT_URL' => '/order/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/order/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1518782556.356
+    'REQUEST_TIME' => 1518782556
+]
