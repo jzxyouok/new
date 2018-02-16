@@ -933,39 +933,31 @@
         },
         {
             "name": "phpoffice/phpspreadsheet",
-            "version": "1.1.0",
+            "version": "1.0.0-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPOffice/PhpSpreadsheet.git",
-                "reference": "a2771e562e3a17c0d512d2009e38fd628beece90"
+                "reference": "7d4dc74fc6219739f1b6e0a7a2f87fdbf33c6ca5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/a2771e562e3a17c0d512d2009e38fd628beece90",
-                "reference": "a2771e562e3a17c0d512d2009e38fd628beece90",
+                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/7d4dc74fc6219739f1b6e0a7a2f87fdbf33c6ca5",
+                "reference": "7d4dc74fc6219739f1b6e0a7a2f87fdbf33c6ca5",
                 "shasum": ""
             },
             "require": {
-                "ext-ctype": "*",
-                "ext-dom": "*",
-                "ext-gd": "*",
                 "ext-iconv": "*",
-                "ext-libxml": "*",
                 "ext-mbstring": "*",
-                "ext-simplexml": "*",
                 "ext-xml": "*",
-                "ext-xmlreader": "*",
                 "ext-xmlwriter": "*",
                 "ext-zip": "*",
-                "ext-zlib": "*",
                 "php": "^5.6|^7.0",
                 "psr/simple-cache": "^1.0"
             },
             "require-dev": {
                 "dompdf/dompdf": "^0.8.0",
-                "friendsofphp/php-cs-fixer": "@stable",
-                "jpgraph/jpgraph": "^4.0",
-                "mpdf/mpdf": "^7.0.0",
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "mpdf/mpdf": "^6.1",
                 "phpunit/phpunit": "^5.7",
                 "squizlabs/php_codesniffer": "^2.7",
                 "tecnickcom/tcpdf": "^6.2"
@@ -1017,7 +1009,7 @@
                 "xls",
                 "xlsx"
             ],
-            "time": "2018-01-28T12:37:15+00:00"
+            "time": "2017-08-17T13:17:23+00:00"
         },
         {
             "name": "psr/simple-cache",
@@ -1132,12 +1124,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "f0d5d7d2105243928b46303fa0eed6c6f9a2cd4e"
+                "reference": "c1959be546ec9dbe1a8e4aabbd386e24fb761ea7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/f0d5d7d2105243928b46303fa0eed6c6f9a2cd4e",
-                "reference": "f0d5d7d2105243928b46303fa0eed6c6f9a2cd4e",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/c1959be546ec9dbe1a8e4aabbd386e24fb761ea7",
+                "reference": "c1959be546ec9dbe1a8e4aabbd386e24fb761ea7",
                 "shasum": ""
             },
             "require": {
@@ -1224,7 +1216,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2018-02-14T23:12:54+00:00"
+            "time": "2018-02-16T03:34:38+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap",

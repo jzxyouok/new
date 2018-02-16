@@ -465,6 +465,7 @@ class UserInvoiceController extends Controller {
 	public function actionC( $id ) 
 	{
 		$model = new UserInvoice;
+		$model->setScenario('c');
 
 		$i = 1;
 		$w = date( 'Y' );
@@ -618,6 +619,7 @@ class UserInvoiceController extends Controller {
 	 */
 	public function actionCreate() {
 		$model = new UserInvoice();
+		$model->setScenario('update');
 
 		if ( $model->load( Yii::$app->request->post() ) && $model->save() ) {
 			return $this->redirect( 'index' );

@@ -43,7 +43,7 @@ class UserInvoice extends \yii\db\ActiveRecord
     {
         return [
 			[['from', 'to'], 'date'],
-			//[['year', 'month'], 'required'],
+			[['year', 'month'], 'required', 'on' => ['c']],
             [['community_id', 'building_id', 'realestate_id', 'description', 'invoice_amount', 'create_time', 'invoice_status', //'cost', 'year', 'month'
 			 ], 'required'],
             [['community_id', 'building_id', 'realestate_id', 'invoice_status'], 'integer'],
@@ -53,7 +53,7 @@ class UserInvoice extends \yii\db\ActiveRecord
             [['year', 'month'], 'string', 'max' => 32],
             [['order_id'], 'string', 'max' => 64],
             [['payment_time'], 'string', 'max' => 22],
-            //[['community_id', 'building_id', 'realestate_id', 'description'], 'unique', 'targetAttribute' => ['community_id', 'building_id', 'realestate_id', 'description'], 'message' => 'The combination of Community ID, Building ID, Realestate ID and Description has already been taken.'],
+            [['community_id', 'building_id', 'realestate_id', 'description'], 'unique', 'targetAttribute' => ['community_id', 'building_id', 'realestate_id', 'description'], 'message' => '费项已存在，请勿重复提交', 'on' => ['update']],
         ];
     }
 	
@@ -91,6 +91,15 @@ class UserInvoice extends \yii\db\ActiveRecord
             'name' => 'to',
 			'file' => '文件',
         ];
+    }
+
+    //设置场景
+    public function scenarios()
+    {
+        $scenarios = parent::scenarios();
+        $scenarios['update'] = ['community_id', 'building_id' , 'realestate_id', 'description', 'invoice_amount' ];
+        $scenarios['c'] =  ['year', 'month', 'cost'];
+        return $scenarios;
     }
 	
     /**
