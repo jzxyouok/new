@@ -99,7 +99,7 @@ class CommunityRealestateController extends Controller
 				
 				foreach($sheetData as $sheet){
 					
-					if(count($sheet) != 5){
+					if(count($sheet) != 4){
 							$session->setFlash('fail','3');
 						    unlink($inputFileName);
 							return $this->redirect( Yii::$app->request->referrer );
