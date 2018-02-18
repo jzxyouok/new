@@ -35,20 +35,6 @@ AppAsset::register($this);
             'class' => 'navbar-default navbar-fixed-top',
         ],
     ]);
-    /*echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-		    ['label' => '订单管理','url' => ['/order/index']],
-		    ['label' => '房屋管理','url' => ['/community-realestate/index']],
-		    ['label' => '费项关联','url' => ['/costrelation/index']],
-		    ['label' => '缴费管理','url' => ['/user-invoice/index']],
-		    ['label' => '费项设置','url' => ['/cost-name/index']],
-		    ['label' => '投诉/建议','url' => ['/ticket/index']],
-		    '<li><span class="badge badge-inverse">'.TicketBasic::getPengdingCommentCount().'</span></li>',
-		    ['label' => '账户管理','url' => ['/user']],
-		    ['label' => '费表抄表','url' => ['/water/index']],
-         ],
-    ]);*/
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav navbar-right'], //<nav class="navbar navbar-default navbar-fixed-bottom">
             'items' => [

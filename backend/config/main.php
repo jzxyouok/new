@@ -57,7 +57,8 @@ return [
 	         ]
 	    ],
 		
-    ],'modules' => [
+    ],
+	'modules' => [
             'gridview' =>  [
                 'class' => '\kartik\grid\Module'
             ]

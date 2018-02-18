@@ -80,7 +80,11 @@ class SiteController extends Controller
 			//'c' => $c,
 		]);
     }
-		
+	//切换小区
+	public function actionChange()
+	{
+		echo '你好！';
+	}
     public function actionLogin()
     {
 		$this->layout = 'main1';
