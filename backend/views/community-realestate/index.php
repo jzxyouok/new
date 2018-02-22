@@ -151,11 +151,11 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 			'width' => '80px',
 		],
 
-		[ 'attribute' => 'room_name',
+		[ 'attribute' => 'room_number',
 			'format' => 'raw',
 			'value' => function ( $model ) {
 				$url = Yii::$app->urlManager->createUrl( [ 'costrelation/index1', 'realestate_id' => $model->realestate_id ] );
-				$name = explode( '-', $model->room_name );
+				$name = explode( '-', $model->room_number );
 				$count = count( $name );
 				if ( $count == 1 ) {
 					return Html::a( '1' . '单元', $url );
@@ -168,11 +168,11 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 			'width' => '80px',
 		],
 
-		[ 'attribute' => 'room_number',
+		[ 'attribute' => 'room_name',
 			'format' => 'raw',
 			'value' => function ( $model ) {
 				//$url = Yii::$app->urlManager->createUrl( [ 'user-invoice/c', 'id' => $model->realestate_id ] );
-				$number = explode( '-', $model->room_number );
+				$number = explode( '-', $model->room_name );
 				return Html::a( end( $number ), '#', [
 					'data-toggle' => 'modal',
 					'data-target' => '#view-modal',

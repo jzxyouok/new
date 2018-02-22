@@ -24,10 +24,10 @@ use yii\widgets\ActiveForm;
 		      				<?= $form->field($model, 'building_id')->dropDownList($bu,['readonly' => true]) ?>
 		      			</div>
 		      			<div class="col-lg-2">
-		      				<?= $form->field($model, 'room_name')->textInput(['maxlength' => true]) ?>
+		      				<?= $form->field($model, 'room_number')->textInput(['maxlength' => true]) ?>
 		      			</div>
 		      			<div class="col-lg-3">
-		      				<?= $form->field($model, 'room_number')->textInput(['maxlength' => true]) ?>
+		      				<?= $form->field($model, 'room_name')->textInput(['maxlength' => true]) ?>
 		      			</div>
 		      		</div>
 		      		<div class="row">

@@ -348,7 +348,7 @@ class OrderController extends Controller
 					foreach($b as $d){
 						$sql1 = "insert into order_products(order_id,product_id,product_quantity)value('$order_id','$d','1')";
 						$result1 = Yii::$app->db->createCommand($sql1)->execute();
-					}//echo '1';die;
+					}
 					if($result1){
 						$sql2 = "insert into order_relationship_address(order_id,address,mobile_phone,name)
 						value('$order_id','$r_id', '$phone','$user_name')";
@@ -357,7 +357,7 @@ class OrderController extends Controller
 				}
 				$transaction->commit();
 			}catch(\Exception $e) {
-				print_r($e);die;
+			print_r($e);die;
             $transaction->rollback();
             return $this->redirect(Yii::$app->request->referrer);
         }

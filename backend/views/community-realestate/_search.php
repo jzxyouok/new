@@ -49,19 +49,10 @@ use kartik\ select2\ Select2;
             ]); ?>
 		</div>
 		<div class="col-lg-1">
-			<?= $form->field($model, 'room_name')->textInput(['readonly' => true]) ?>
+			<?= $form->field($model, 'room_number')->textInput(['readonly' => true]) ?>
 		</div>
 		<div class="col-lg-1">
-			<?= $form->field($model, 'room_number')->widget(DepDrop::classname(), [
-                'type' => DepDrop::TYPE_SELECT2,
-                'options'=>['id'=>'costrelation-id'],
-	            'select2Options'=>['pluginOptions'=>['allowClear'=>true]],
-                'pluginOptions'=>[
-                    'depends'=>['building'],
-                    'placeholder'=>'请选择...',
-                    'url'=>Url::to(['/costrelation/r'])
-                ]
-            ]); ?>
+			<?= $form->field($model, 'room_name')->textInput() ?>
 		</div>
 		<div class="col-lg-2">
 			<?= $form->field($model,'owners_name')->textInput(['placeholder'=>'业主姓名'])->label('姓名') ?>

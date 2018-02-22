@@ -65,6 +65,8 @@ class CommunityRealestateController extends Controller
 	{
 		$model = new Up();
 		$session = Yii::$app->session;
+		ini_set( 'memory_limit', '2048M' ); // 调整PHP由默认占用内存为1024M(1GB)
+		
 		if ( Yii::$app->request->isPost ) {
 			$model->file = UploadedFile::getInstance( $model, 'file' );
 			$name = $_FILES[ 'Up' ][ 'name' ][ 'file' ]; //保存文件名
@@ -99,7 +101,7 @@ class CommunityRealestateController extends Controller
 				
 				foreach($sheetData as $sheet){
 					
-					if(count($sheet) != 4){
+					if(count($sheet) != 7){
 							$session->setFlash('fail','3');
 						    unlink($inputFileName);
 							return $this->redirect( Yii::$app->request->referrer );
@@ -117,23 +119,32 @@ class CommunityRealestateController extends Controller
 							$r_id = CommunityRealestate::find()->select( [ 'realestate_id' ] )
                                 ->andwhere(['community_id' => $c_id['community_id']])
                                 ->where( [ 'building_id' => $b_id['building_id'] ] )
-                                ->andwhere( [ 'room_name' => $sheet[ 'C' ] ] )
+                                ->andwhere( [ 'room_name' => $sheet[ 'D' ] ] )
                                 ->asArray()
                                 ->one();
-							if($r_id){
+							if(!empty($r_id)){
 								//更新数据库记录
-								$transaction = Yii::$app->db->beginTransaction(); //事务开始标记
-								try {
-									CommunityRealestate::updateAll(['acreage' => $sheet[ 'D' ]], 'realestate_id = :id',[':id' => $r_id['realestate_id']]);
-									$transaction->commit(); //事务提交标记
-								} catch ( \Exception $e ) {
-									print_r( $e );
-									$transaction->rollback(); // 事务滚回标记
-									return $this->redirect( Yii::$app->request->referrer ); //返回请求页面
-								}
+								CommunityRealestate::updateAll(['acreage' => $sheet[ 'G' ]], 'realestate_id = :id',[':id' => $r_id['realestate_id']]);
+								
+							}elseif(!empty($c_id) && !empty($b_id)){
+								//插入新记录
+								$model = new CommunityRealestate();
+								
+								$model->community_id = (int)$c_id['community_id']; //小区
+								$model->building_id = (int)$b_id['building_id'];//楼宇
+								$model->room_number = (int)$sheet['C']; //单元
+								$model->room_name = $sheet['D'];//房号
+								$model->owners_name = $sheet['E'];
+								$model->owners_cellphone = (int)$sheet['F'];//手机号码
+								$model->acreage = (int)$sheet['G'];
+											
+								$model->save();
+                                
+								unlink($inputFileName);
+								return $this->redirect( Yii::$app->request->referrer); //返回请求页面
 							}else{
-                                unlink($inputFileName);
-                                return $this->redirect( Yii::$app->request->referrer);
+								echo '数据为空！';exit;
+								return $this->redirect( Yii::$app->request->referrer ); //返回请求页面
 							}
 						}else{
 							unlink($inputFileName);
@@ -149,7 +160,7 @@ class CommunityRealestateController extends Controller
 				return $this->redirect( Yii::$app->request->referrer ); //返回请求页面
 			}
 		}
-		unlink($inputFileName);
+		
 		return $this->redirect( Yii::$app->request->referrer);
 	}
 
@@ -236,6 +247,8 @@ class CommunityRealestateController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+		$model->setScenario('update');
+		
 		$b = CommunityBuilding::find()->select('building_id,building_name')->where(['building_id' => $model['building_id']])->asArray()->all();
 	    $c = CommunityBasic::find()->select('community_name,community_id')->where(['community_id' => $model['community_id']])->asArray()->all();
 	    $comm = ArrayHelper::map($c,'community_id','community_name');

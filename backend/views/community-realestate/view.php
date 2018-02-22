@@ -21,7 +21,9 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 	            	'attributes' => [
 	            		'realestate_id',
 	            		'community0.community_name',
-	            		'building0.building_name', [ 'attribute' => 'room_name',
+	            		'building0.building_name',
+	
+	                    [ 'attribute' => 'room_name',
 	            			'value' => function ( $model ) {
 	            				$name = explode( '-', $model[ 'room_name' ] );
 	            				if ( count( $name ) == 1 ) {
@@ -31,9 +33,9 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 	            				}
 	            			}
 	            		],
-	            		[ 'attribute' => 'room_number',
+	            		[ 'attribute' => 'room_name',
 	            			'value' => function ( $model ) {
-	            				$number = explode( '-', $model[ 'room_number' ] );
+	            				$number = explode( '-', $model[ 'room_name' ] );
 	            				return end( $number );
 	            			}
 	            		],

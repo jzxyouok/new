@@ -34,15 +34,14 @@ class CommunityRealestate extends \yii\db\ActiveRecord
      */
     public function rules()
     {
-        return [
-            [['community_id', 'building_id', 'room_name', 'room_number', 'owners_name', 'owners_cellphone'], 'required'],
+       return [
+             [['community_id', 'building_id', 'room_name', 'room_number', 'owners_name', 'owners_cellphone'], 'required'],
             [['community_id', 'building_id'], 'integer'],
-			[['acreage'], 'number'],
-			[['acreage'], 'string', 'max' => 6],
-            [['owners_name'], 'string', 'max' => 6],
-            [['room_name', 'room_number'], 'string', 'length' => 6,'message' => '最长6个字符'],
-            [['owners_cellphone'], 'string', 'max' => 12],
-            [['community_id', 'building_id', 'room_name', 'room_number', 'owners_name'], 'unique', 'targetAttribute' => ['community_id', 'building_id', 'room_name', 'room_number', 'owners_name'], 'message' => 'The combination of Community ID, Building ID, Room Name, Room Number and Owners Name has already been taken.'],
+			[['acreage'], 'number', 'max' => 250],
+            [['owners_name'], 'string', 'max' => 6, 'on' => ['update']],
+            [['room_name', 'room_number'], 'string', 'max' => 6,'message' => '最长6个字符', 'on' => ['update']],
+            [['owners_cellphone'], 'string', 'max' => 12, 'on' => ['update']],
+            [['community_id', 'building_id', 'room_name', 'room_number', 'owners_name'], 'unique', 'targetAttribute' => ['community_id', 'building_id', 'room_name', 'room_number', 'owners_name'], 'message' => '数据重复，请勿再次提交！'],
         ];
     }
 
@@ -55,12 +54,20 @@ class CommunityRealestate extends \yii\db\ActiveRecord
             'realestate_id' => '编号',
             'community_id' => '小区',
             'building_id' => '楼宇',
-            'room_name' => '单元',
-            'room_number' => '房号',
+            'room_name' => '房号',
+            'room_number' => '单元',
             'owners_name' => '业主',
             'owners_cellphone' => '手机',
 			'acreage' => '面积'
         ];
+    }
+	
+	//设置场景
+    public function scenarios()
+    {
+        $scenarios = parent::scenarios();
+        $scenarios['update'] = ['community_id', 'building_id' , 'room_number', 'room_name', 'owners_name', 'owners_cellphone', 'acreage' ];
+        return $scenarios;
     }
 
     //批量操作

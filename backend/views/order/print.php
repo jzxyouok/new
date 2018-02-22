@@ -18,44 +18,45 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 	}
 </script>
 
+
 <div class="user-order-pay">
 
 	<span id='div1'>
-		
-		<center>
+		<style>
+        	h3{
+        		text-align: center;
+        	}
+           th{
+           		text-align:center;
+           	}
+            
+        	table{
+        		text-align: center;
+        		margin:auto;
+        		width: 768px;
+        	}
+        </style>
+        
 			<h3>广西裕达物业服务有限公司缴费单</h3>
-		</center>
-		<table align="center" width="768" border="0">
+			
+		<table>
 			<tr>
-				<td>
-					<?php echo '&nbsp'; ?>
-				</td>
-				<td><strong>房号:</strong>
+				<td align="left" colspan="2"><strong>房号:</strong>
 					<?php echo $comm['community_name']; echo '&nbsp'; echo $building['building_name'];echo '&nbsp'; echo $r_name['number']; echo '&nbsp'; echo $r_name['name']; ?>
 				</td>
-				<td align="center">
+				<td align="right">
 					<?php echo '支付方式：'.$e[$order['payment_gateway']]; ?>
 				</td>
 			</tr>
 		</table>
-		<table width="768" border="1" align="center" cellspacing="0" cellpadding="0">
+		<table border="1" cellspacing="0" cellpadding="0">
 			<tbody>
 				<tr>
-					<th>
-						<center>序号</center>
-					</th>
-					<th colspan="3">
-						<center>名称</center>
-					</th>
-					<th>
-						<center>应收</center>
-					</th>
-					<th>
-						<center>实收</center>
-					</th>
-					<th>
-						<center>备注</center>
-					</th>
+					<th>序号</th>
+					<th colspan="3">详情</th>
+					<th>应收</th>
+					<th>实收</th>
+					<th>备注</th>
 				</tr>
 				<?php foreach($invoic as $k =>$i): $i = (object) $i?>
 				<tr>
@@ -64,22 +65,18 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 							<?php echo $k+1; ?>
 						</center>
 					</td>
-					<td align="center" width="9%">
+					<td width="9%">
 						<?php echo $i->year; ?>年</td>
-					<td align="center" width="6%">
+					<td width="6%">
 						<?php echo $i->month; ?>月</td>
-					<td width="30%">
+					<td width="30%" align="left">
 						<?php echo $i->description; ?>
 					</td>
 					<td width="9%">
-						<center>
 							<?php echo $i->invoice_amount; ?>
-						</center>
 					</td>
 					<td width="9%">
-						<center>
 							<?php echo $i->invoice_amount; ?>
-						</center>
 					</td>
 					<td width=""></td>
 				</tr>
@@ -94,18 +91,14 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 					</td>
 					<td colspan="2" align="right">合计：</td>
 					<td colspan="1">
-						<center>
-							<?php $c = $m; echo $c; ?>元</center>
+							<?php $c = $m; echo $c; ?>元
 					</td>
 				</tr>
 			</tbody>
 		</table>
-		<table width="768" border="0" align="center">
+		<table>
 			<tr>
-
-			</tr>
-			<tr>
-				<td>收款人：
+				<td align="left">收款人：
 					<?php echo $user_name; echo '('.Yii::$app->request->userIP.')'; ?>
 				</td>
 				<td align="right">
@@ -114,9 +107,11 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 			</tr>
 		</table>
 	</span>
-	<table width="768" border="0" align="center">
+	<table>
 		<tr>
-			<td align="right"><a href="javascript:printme()" rel="external nofollow" target="_self">打印</a></td>
+			<td>
+				<a href="javascript:printme()" rel="external nofollow" target="_self"><image src='/image/print.png' width = '10%' height = '10%'></image></a>
+			</td>
 		</tr>
 	</table>
 </div>

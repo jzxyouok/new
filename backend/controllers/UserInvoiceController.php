@@ -85,6 +85,8 @@ class UserInvoiceController extends Controller {
 	{
 		$model = new Up();
 		$session = Yii::$app->session;
+		ini_set( 'memory_limit', '2048M' ); 
+		
 		if ( Yii::$app->request->isPost ) {
 			$model->file = UploadedFile::getInstance( $model, 'file' );
 			$name = $_FILES[ 'Up' ][ 'name' ][ 'file' ]; //保存文件名
