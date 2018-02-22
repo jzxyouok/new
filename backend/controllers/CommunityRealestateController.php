@@ -65,7 +65,12 @@ class CommunityRealestateController extends Controller
 	{
 		$model = new Up();
 		$session = Yii::$app->session;
-		ini_set( 'memory_limit', '2048M' ); // 调整PHP由默认占用内存为1024M(1GB)
+		ini_set( 'memory_limit', '2048M' );// 调整PHP由默认占用内存为1024M(1GB)
+		set_time_limit(300);
+		$a = 0; // 更新条数
+		$b = 0; // 插入条数
+		$c = 0; // 失败条数
+		$h = 0; //重复条数
 		
 		if ( Yii::$app->request->isPost ) {
 			$model->file = UploadedFile::getInstance( $model, 'file' );
@@ -97,10 +102,11 @@ class CommunityRealestateController extends Controller
 
 					$sheetData = $spreadsheet->getActiveSheet()->toArray( null, true, true, true );
 					unset( $sheetData[ '1' ] ); //去掉表头
+					$i = count($sheetData);
 				}
 				
 				foreach($sheetData as $sheet){
-					
+					sleep(0.01);
 					if(count($sheet) != 7){
 							$session->setFlash('fail','3');
 						    unlink($inputFileName);
@@ -124,12 +130,17 @@ class CommunityRealestateController extends Controller
                                 ->one();
 							if(!empty($r_id)){
 								//更新数据库记录
-								CommunityRealestate::updateAll(['acreage' => $sheet[ 'G' ]], 'realestate_id = :id',[':id' => $r_id['realestate_id']]);
-								
+								$d = CommunityRealestate::updateAll(['acreage' => $sheet[ 'G' ]], 'realestate_id = :id',[':id' => $r_id['realestate_id']]);
+								if ( $d ) {
+			                    	$a <= $i;
+			                    	$a += 1;
+			                    }else {
+			                    	$h <= $i;
+			                    	$h += 1;
+			                    }
 							}elseif(!empty($c_id) && !empty($b_id)){
 								//插入新记录
 								$model = new CommunityRealestate();
-								
 								$model->community_id = (int)$c_id['community_id']; //小区
 								$model->building_id = (int)$b_id['building_id'];//楼宇
 								$model->room_number = (int)$sheet['C']; //单元
@@ -138,21 +149,25 @@ class CommunityRealestateController extends Controller
 								$model->owners_cellphone = (int)$sheet['F'];//手机号码
 								$model->acreage = (int)$sheet['G'];
 											
-								$model->save();
-                                
-								unlink($inputFileName);
-								return $this->redirect( Yii::$app->request->referrer); //返回请求页面
+								$e = $model->save(); //保存
+								if( $e ){
+									$b <= $i;
+									$b += 1;
+								}else{
+									$c <= $i;
+									$c += 1;
+								}
 							}else{
-								echo '数据为空！';exit;
-								return $this->redirect( Yii::$app->request->referrer ); //返回请求页面
+								$c += 1;
+								continue;
 							}
 						}else{
-							unlink($inputFileName);
-		                    return $this->redirect( Yii::$app->request->referrer);
+							$c += 1;
+							continue;
 						}
 					}else{
-						unlink($inputFileName);
-						return $this->redirect( Yii::$app->request->referrer);
+						$c += 1;
+						continue;
 					}
 				}
 			}else{
@@ -160,8 +175,11 @@ class CommunityRealestateController extends Controller
 				return $this->redirect( Yii::$app->request->referrer ); //返回请求页面
 			}
 		}
-		
-		return $this->redirect( Yii::$app->request->referrer);
+		if(isset($inputFileName)){
+			unlink($inputFileName);
+		}
+		$con = "成功更新记录：" . $a . "条！-  插入：". $b . "条！ - 失败：". $c . "条！ - 重复". $h. "条 - 合计：" . $i . "条";
+		echo "<script> alert('$con');parent.location.href='./'; </script>";
 	}
 
 	//检查用户是否登录
@@ -255,7 +273,7 @@ class CommunityRealestateController extends Controller
 	    $bu = ArrayHelper::map($b,'building_id','building_name');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->realestate_id]);
+            return $this->redirect( Yii::$app->request->referrer );
         } else {
             return $this->renderAjax('form', [
                 'model' => $model,

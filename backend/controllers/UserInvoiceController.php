@@ -451,14 +451,14 @@ class UserInvoiceController extends Controller {
 			}
 
 			if ( $result ) {
-				$a <= count( $query );
+				$a <= $i;
 				$a += 1;
 			} else {
-				$b <= count( $query );
+				$b <= $i;
 				$b += 1;
 			}
 		}
-		$con = "成功生成缴费记录" . $a . "条！-  失败：" . $b . "条 - 合计：" . $i . "条";
+		$con = "成功生成费项" . $a . "条！-  失败：" . $b . "条 - 合计：" . $i . "条";
 		echo "<script> alert('$con');parent.location.href='./'; </script>";
 
 	}

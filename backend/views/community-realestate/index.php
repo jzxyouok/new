@@ -103,7 +103,9 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 	if($message == 2){
 		echo "<script>alert('文件格式有误，请重新选择')</script>";
 	}elseif($message == 3){
-		echo "<script>alert('数据有误，请修改源数据')</script>";echo '';
+		echo "<script>alert('数据有误，请修改源数据')</script>";
+	}elseif($message == 4){
+		echo "<script>alert('导入成功！')</script>";
 	}
 	?>
 
@@ -162,7 +164,6 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 				} else {
 					return Html::a( reset( $name ) . '单元', $url );
 				}
-
 			},
 			'hAlign' => 'center',
 			'width' => '80px',
