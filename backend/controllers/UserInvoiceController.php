@@ -176,7 +176,7 @@ class UserInvoiceController extends Controller {
 										$model->month = $m;
 										$model->invoice_amount = $price;
 										$model->create_time = $f;
-										$model->invoice_status = (int)$sheet[ 'I' ];
+										$model->invoice_status = '0';
 											
 										$e = $model->save(); //保存
 										
