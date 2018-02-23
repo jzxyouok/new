@@ -34,40 +34,42 @@ use yii\helpers\ArrayHelper;
 				<td>
 					<div class="row">
 						<div class="col-lg-4">
-							<?php //$_SESSION[ 'user' ][ 'role' ] == 1 |||| $_SESSION[ 'user' ][ 'role' ] == 10 
-			                if (  $_SESSION[ 'user' ][ 'role' ] == 14 && empty($model['cost_name']) ) {
-			                	//父级费项编辑框  财务专用
+							<?php
+							
+							$role = $_SESSION[ 'user' ][ 'role' ]; 
+			                if ( $role == 7 && (empty($model['cost_name']) || $model['level'] == 0) ) {
+			                	//父级费项编辑框  财务经理专用
 			                	echo $form->field( $model, 'cost_name' )->textInput();
-			                }elseif($_SESSION[ 'user' ][ 'role' ] == 14 & strlen($model['cost_name']) >3) {
-			                	//子级费项编辑框
-			                	echo $form->field( $model, 'cost_name' )->dropDownList( $comm, [ 'prempt' => '请选择' ] );
-			                }elseif($_SESSION[ 'user' ][ 'role' ] != 14 & $model['level'] == 0){
-			                	echo "<script>alert('权限不足，请返回')</script>";
-    		                    exit;
-			                }else{
+			                }elseif($role == 14 && empty($model['cost_name'])){
+								//创建子级费项，财务专用
+								echo $form->field( $model, 'cost_name' )->dropDownList( $comm );
+							}elseif($role != 7 && $model['level'] == 0){
+								echo "<script>alert('权限不足，请返回')</script>";
+								exit;
+							}else{
 			                	echo $form->field( $model, 'cost_name' )->dropDownList( $comm, [ 'prempt' => '请选择' ] );
 			                }
 			                ?>
 						</div>
 						<div class="col-lg-4">
 							<?php 
-			                if($model['level'] == 0 & $_SESSION[ 'user' ][ 'role' ] == 14){
+			                if($model['level'] == 0 & $role == 7){
 			                	echo $form->field($model,'level')->dropDownList(['父级','子级']);
 			                }else{
-			                	echo $form->field($model, 'level')->dropDownList([1 => '子级'],['prempt' =>'请选择']);
+			                	echo $form->field($model, 'level')->dropDownList([1 => '子级']);
 			                }
 			                ?>
 						</div>
 						<div class="col-lg-4">
 							<?php 
-			                if($_SESSION[ 'user' ][ 'role' ] == 14 && empty($model['cost_name'])){
-			                	//添加父级费项框  财务专用
-			                	echo $form->field($model, 'parent')->dropDownList($c,['prempt' =>'请选择']);
-			                }elseif($_SESSION[ 'user' ][ 'role' ] == 14 & $model['level'] == 0){
-			                	//父级费项编辑框  财务专用
-			                	echo $form->field($model, 'parent')->dropDownList(['无']);
-			                }else{
-			                	echo $form->field($model, 'parent')->dropDownList($cost,['prempt' =>'请选择']);
+			                if($role == 7 && empty($model['cost_name'])){
+			                	//添加父级费项框  财务经理专用
+			                	echo $form->field($model, 'parent')->dropDownList([0 => '父级']);
+			                }elseif($role == 14){
+			                	//子级费项编辑框  财务专用
+			                	echo $form->field($model, 'parent')->dropDownList($cost);
+							}else{
+			                	echo $form->field($model, 'parent')->dropDownList($cost);
 			                }
 			             ?>
 						</div>
@@ -75,7 +77,7 @@ use yii\helpers\ArrayHelper;
 
 					<div class="row">
 						<div class="col-lg-4">
-							<?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
+							<?= $form->field($model, 'price')->textInput(['maxlength' => true, 'value' => 0]) ?>
 						</div>
 						<div class="col-lg-4">
 							<?= $form->field($model, 'inv')->dropDownList(['否','是'],['length' => 1]) ?>

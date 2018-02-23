@@ -70,14 +70,14 @@ class SiteController extends Controller
 		$post = Yii::$app->user->identity;
 		foreach($post as $info)
 		$session['user'] = $post;
-		
-		//$c = CommunityBasic::find()->asArray()->limit(5)->all();
-		
+		$name = $post['name']; // 用户名
+		$a = Yii::$app->request->userIP; //用户IP地址
+				
         return $this->render('index',[
 			'model' => $model,
 			'post' => $post,
-			'info' => $info,
-			//'c' => $c,
+			'name' => $name,
+			'a' => $a,
 		]);
     }
 	//切换小区

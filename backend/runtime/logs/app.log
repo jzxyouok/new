@@ -18993,3 +18993,611 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1519374598.882
     'REQUEST_TIME' => 1519374598
 ]
+2018-02-23 23:38:10 [127.0.0.1][82][6ar2ncom6qseasg0brblglmm6m][error][ParseError] ParseError: syntax error, unexpected ')' in C:\Apache24\htdocs\new\backend\views\cost-name\_form.php:68
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Apache24\\htd...', Array)
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Apache24\\htd...', Array, NULL)
+#2 C:\Apache24\htdocs\new\backend\views\cost-name\update.php(16): yii\base\View->render('_form', Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(336): require('C:\\Apache24\\htd...')
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Apache24\\htd...', Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\View.php(212): yii\base\View->renderFile('C:\\Apache24\\htd...', Array, Object(backend\controllers\CostNameController))
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Controller.php(49): yii\web\View->renderAjax('update', Array, Object(backend\controllers\CostNameController))
+#7 C:\Apache24\htdocs\new\backend\controllers\CostNameController.php(110): yii\web\Controller->renderAjax('update', Array)
+#8 [internal function]: backend\controllers\CostNameController->actionUpdate('1')
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('cost-name/updat...', Array)
+#13 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#15 {main}
+2018-02-23 23:38:10 [127.0.0.1][82][6ar2ncom6qseasg0brblglmm6m][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '6ar2ncom6qseasg0brblglmm6m'
+    '_csrf-backend' => 'd141e779df2d6fd24b594ef1440ab921507c74fe789b108f1f3cbc28a412dc41a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"u_sJ_91jSx1CgrFS4NVfxhnHT5OOmSTv\";}'
+    '_identity-backend' => '562003f38bc798d5108581535e673c7b1e9c3f79295b0744d24655fcb9f81f9ea:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"82\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '82'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 82
+            'company' => 0
+            'community' => null
+            'real_name' => '裕达物业财务'
+            'name' => '裕达物业财务'
+            'role' => 14
+            'phone' => null
+            'password' => 'jagfFQlpxdrVwZNZ+LgsBA=='
+            'status' => 1
+            'comment' => '核查各小区缴费数据'
+            'salt' => 'b98a718ea169dcf10400bf9b0140a906'
+            'create_id' => 64
+            'create_time' => '2016-05-13 15:44:55'
+            'update_time' => '2018-02-23 11:30:14'
+            'update_id' => 64
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 82
+            'company' => 0
+            'community' => null
+            'real_name' => '裕达物业财务'
+            'name' => '裕达物业财务'
+            'role' => 14
+            'phone' => null
+            'password' => 'jagfFQlpxdrVwZNZ+LgsBA=='
+            'status' => 1
+            'comment' => '核查各小区缴费数据'
+            'salt' => 'b98a718ea169dcf10400bf9b0140a906'
+            'create_id' => 64
+            'create_time' => '2016-05-13 15:44:55'
+            'update_time' => '2018-02-23 11:30:14'
+            'update_id' => 64
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'cost-name/update'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.yuda.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.yuda.com/cost-name/index'
+    'HTTP_X_CSRF_TOKEN' => 'X-j_k9jSIEiWnOhWQ28UpQ4abfWDBTPf8jddhgEiITEqt4zZh-sRIsXk2RUkHVL2OlQ7k_ttXZemAhLJbHF1Rw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'advanced-backend=6ar2ncom6qseasg0brblglmm6m; _csrf-backend=d141e779df2d6fd24b594ef1440ab921507c74fe789b108f1f3cbc28a412dc41a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22u_sJ_91jSx1CgrFS4NVfxhnHT5OOmSTv%22%3B%7D; _identity-backend=562003f38bc798d5108581535e673c7b1e9c3f79295b0744d24655fcb9f81f9ea%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2282%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '\"C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;\";C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\wamp\\bin\\php\\php5.6.25;C:\\Apache24\\bin;C:\\php;C:\\composer;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.yuda.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '57472'
+    'REDIRECT_URL' => '/cost-name/update'
+    'REDIRECT_QUERY_STRING' => 'id=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=1'
+    'REQUEST_URI' => '/cost-name/update?id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519400290.332
+    'REQUEST_TIME' => 1519400290
+]
+2018-02-24 00:42:44 [127.0.0.1][95][mvuou89ccca6qddm0it9lb9l7e][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: name！ in C:\Apache24\htdocs\new\backend\views\site\index.php:46
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\views\site\index.php(46): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\Apache24\\htd...', 46, Array)
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(336): require('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Apache24\\htd...', Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Apache24\\htd...', Array, Object(backend\controllers\SiteController))
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#5 C:\Apache24\htdocs\new\backend\controllers\SiteController.php(80): yii\base\Controller->render('index', Array)
+#6 [internal function]: backend\controllers\SiteController->actionIndex()
+#7 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2018-02-24 00:42:44 [127.0.0.1][95][mvuou89ccca6qddm0it9lb9l7e][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mvuou89ccca6qddm0it9lb9l7e'
+    '_csrf-backend' => '7ded4777131540b48f9455dbf4278d16b9c2de9ae5fc13d70a076e5d47edcf7ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"h9E6sku_7LI8r9PlPisY-It9oZR81szJ\";}'
+    '_identity-backend' => 'f78186b20b08d0feffc57554f50ec947a92b9a9c919645fffa113040b9002797a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"95\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '95'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 95
+            'company' => 0
+            'community' => 14
+            'real_name' => '水漾'
+            'name' => '水漾'
+            'role' => 11
+            'phone' => null
+            'password' => 'hy8rGDxjamtJ//zA2ioVpw=='
+            'status' => 1
+            'comment' => '用于账单导入、前台收费'
+            'salt' => 'e4c6f8a1d2aa35abdec2de83d83661fd'
+            'create_id' => 64
+            'create_time' => '2016-08-05 09:18:50'
+            'update_time' => '2016-09-06 18:43:20'
+            'update_id' => 64
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 95
+            'company' => 0
+            'community' => 14
+            'real_name' => '水漾'
+            'name' => '水漾'
+            'role' => 11
+            'phone' => null
+            'password' => 'hy8rGDxjamtJ//zA2ioVpw=='
+            'status' => 1
+            'comment' => '用于账单导入、前台收费'
+            'salt' => 'e4c6f8a1d2aa35abdec2de83d83661fd'
+            'create_id' => 64
+            'create_time' => '2016-08-05 09:18:50'
+            'update_time' => '2016-09-06 18:43:20'
+            'update_id' => 64
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.yuda.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.yuda.com/login'
+    'HTTP_COOKIE' => 'advanced-backend=mvuou89ccca6qddm0it9lb9l7e; _csrf-backend=7ded4777131540b48f9455dbf4278d16b9c2de9ae5fc13d70a076e5d47edcf7ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22h9E6sku_7LI8r9PlPisY-It9oZR81szJ%22%3B%7D; _identity-backend=f78186b20b08d0feffc57554f50ec947a92b9a9c919645fffa113040b9002797a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2295%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '\"C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;\";C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\wamp\\bin\\php\\php5.6.25;C:\\Apache24\\bin;C:\\php;C:\\composer;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.yuda.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '62663'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519404164.365
+    'REQUEST_TIME' => 1519404164
+]
+2018-02-24 00:42:51 [127.0.0.1][95][mvuou89ccca6qddm0it9lb9l7e][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: name！ in C:\Apache24\htdocs\new\backend\views\site\index.php:46
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\views\site\index.php(46): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\Apache24\\htd...', 46, Array)
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(336): require('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Apache24\\htd...', Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Apache24\\htd...', Array, Object(backend\controllers\SiteController))
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#5 C:\Apache24\htdocs\new\backend\controllers\SiteController.php(80): yii\base\Controller->render('index', Array)
+#6 [internal function]: backend\controllers\SiteController->actionIndex()
+#7 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2018-02-24 00:42:51 [127.0.0.1][95][mvuou89ccca6qddm0it9lb9l7e][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mvuou89ccca6qddm0it9lb9l7e'
+    '_csrf-backend' => '7ded4777131540b48f9455dbf4278d16b9c2de9ae5fc13d70a076e5d47edcf7ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"h9E6sku_7LI8r9PlPisY-It9oZR81szJ\";}'
+    '_identity-backend' => 'f78186b20b08d0feffc57554f50ec947a92b9a9c919645fffa113040b9002797a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"95\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '95'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 95
+            'company' => 0
+            'community' => 14
+            'real_name' => '水漾'
+            'name' => '水漾'
+            'role' => 11
+            'phone' => null
+            'password' => 'hy8rGDxjamtJ//zA2ioVpw=='
+            'status' => 1
+            'comment' => '用于账单导入、前台收费'
+            'salt' => 'e4c6f8a1d2aa35abdec2de83d83661fd'
+            'create_id' => 64
+            'create_time' => '2016-08-05 09:18:50'
+            'update_time' => '2016-09-06 18:43:20'
+            'update_id' => 64
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 95
+            'company' => 0
+            'community' => 14
+            'real_name' => '水漾'
+            'name' => '水漾'
+            'role' => 11
+            'phone' => null
+            'password' => 'hy8rGDxjamtJ//zA2ioVpw=='
+            'status' => 1
+            'comment' => '用于账单导入、前台收费'
+            'salt' => 'e4c6f8a1d2aa35abdec2de83d83661fd'
+            'create_id' => 64
+            'create_time' => '2016-08-05 09:18:50'
+            'update_time' => '2016-09-06 18:43:20'
+            'update_id' => 64
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.yuda.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.yuda.com/'
+    'HTTP_COOKIE' => 'advanced-backend=mvuou89ccca6qddm0it9lb9l7e; _csrf-backend=7ded4777131540b48f9455dbf4278d16b9c2de9ae5fc13d70a076e5d47edcf7ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22h9E6sku_7LI8r9PlPisY-It9oZR81szJ%22%3B%7D; _identity-backend=f78186b20b08d0feffc57554f50ec947a92b9a9c919645fffa113040b9002797a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2295%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '\"C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;\";C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\wamp\\bin\\php\\php5.6.25;C:\\Apache24\\bin;C:\\php;C:\\composer;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.yuda.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '62748'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519404171.91
+    'REQUEST_TIME' => 1519404171
+]
+2018-02-24 00:42:54 [127.0.0.1][95][mvuou89ccca6qddm0it9lb9l7e][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: name！ in C:\Apache24\htdocs\new\backend\views\site\index.php:46
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\views\site\index.php(46): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\Apache24\\htd...', 46, Array)
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(336): require('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Apache24\\htd...', Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Apache24\\htd...', Array, Object(backend\controllers\SiteController))
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#5 C:\Apache24\htdocs\new\backend\controllers\SiteController.php(80): yii\base\Controller->render('index', Array)
+#6 [internal function]: backend\controllers\SiteController->actionIndex()
+#7 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2018-02-24 00:42:54 [127.0.0.1][95][mvuou89ccca6qddm0it9lb9l7e][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mvuou89ccca6qddm0it9lb9l7e'
+    '_csrf-backend' => '7ded4777131540b48f9455dbf4278d16b9c2de9ae5fc13d70a076e5d47edcf7ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"h9E6sku_7LI8r9PlPisY-It9oZR81szJ\";}'
+    '_identity-backend' => 'f78186b20b08d0feffc57554f50ec947a92b9a9c919645fffa113040b9002797a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"95\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '95'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 95
+            'company' => 0
+            'community' => 14
+            'real_name' => '水漾'
+            'name' => '水漾'
+            'role' => 11
+            'phone' => null
+            'password' => 'hy8rGDxjamtJ//zA2ioVpw=='
+            'status' => 1
+            'comment' => '用于账单导入、前台收费'
+            'salt' => 'e4c6f8a1d2aa35abdec2de83d83661fd'
+            'create_id' => 64
+            'create_time' => '2016-08-05 09:18:50'
+            'update_time' => '2016-09-06 18:43:20'
+            'update_id' => 64
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 95
+            'company' => 0
+            'community' => 14
+            'real_name' => '水漾'
+            'name' => '水漾'
+            'role' => 11
+            'phone' => null
+            'password' => 'hy8rGDxjamtJ//zA2ioVpw=='
+            'status' => 1
+            'comment' => '用于账单导入、前台收费'
+            'salt' => 'e4c6f8a1d2aa35abdec2de83d83661fd'
+            'create_id' => 64
+            'create_time' => '2016-08-05 09:18:50'
+            'update_time' => '2016-09-06 18:43:20'
+            'update_id' => 64
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.yuda.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.yuda.com/login'
+    'HTTP_COOKIE' => 'advanced-backend=mvuou89ccca6qddm0it9lb9l7e; _csrf-backend=7ded4777131540b48f9455dbf4278d16b9c2de9ae5fc13d70a076e5d47edcf7ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22h9E6sku_7LI8r9PlPisY-It9oZR81szJ%22%3B%7D; _identity-backend=f78186b20b08d0feffc57554f50ec947a92b9a9c919645fffa113040b9002797a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2295%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '\"C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;\";C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\wamp\\bin\\php\\php5.6.25;C:\\Apache24\\bin;C:\\php;C:\\composer;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.yuda.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '62768'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519404174.008
+    'REQUEST_TIME' => 1519404174
+]
+2018-02-24 00:42:58 [127.0.0.1][95][mvuou89ccca6qddm0it9lb9l7e][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: name！ in C:\Apache24\htdocs\new\backend\views\site\index.php:46
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\views\site\index.php(46): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\Apache24\\htd...', 46, Array)
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(336): require('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Apache24\\htd...', Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Apache24\\htd...', Array, Object(backend\controllers\SiteController))
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#5 C:\Apache24\htdocs\new\backend\controllers\SiteController.php(80): yii\base\Controller->render('index', Array)
+#6 [internal function]: backend\controllers\SiteController->actionIndex()
+#7 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2018-02-24 00:42:58 [127.0.0.1][95][mvuou89ccca6qddm0it9lb9l7e][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mvuou89ccca6qddm0it9lb9l7e'
+    '_csrf-backend' => '7ded4777131540b48f9455dbf4278d16b9c2de9ae5fc13d70a076e5d47edcf7ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"h9E6sku_7LI8r9PlPisY-It9oZR81szJ\";}'
+    '_identity-backend' => 'f78186b20b08d0feffc57554f50ec947a92b9a9c919645fffa113040b9002797a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"95\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '95'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 95
+            'company' => 0
+            'community' => 14
+            'real_name' => '水漾'
+            'name' => '水漾'
+            'role' => 11
+            'phone' => null
+            'password' => 'hy8rGDxjamtJ//zA2ioVpw=='
+            'status' => 1
+            'comment' => '用于账单导入、前台收费'
+            'salt' => 'e4c6f8a1d2aa35abdec2de83d83661fd'
+            'create_id' => 64
+            'create_time' => '2016-08-05 09:18:50'
+            'update_time' => '2016-09-06 18:43:20'
+            'update_id' => 64
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 95
+            'company' => 0
+            'community' => 14
+            'real_name' => '水漾'
+            'name' => '水漾'
+            'role' => 11
+            'phone' => null
+            'password' => 'hy8rGDxjamtJ//zA2ioVpw=='
+            'status' => 1
+            'comment' => '用于账单导入、前台收费'
+            'salt' => 'e4c6f8a1d2aa35abdec2de83d83661fd'
+            'create_id' => 64
+            'create_time' => '2016-08-05 09:18:50'
+            'update_time' => '2016-09-06 18:43:20'
+            'update_id' => 64
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.yuda.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-backend=mvuou89ccca6qddm0it9lb9l7e; _csrf-backend=7ded4777131540b48f9455dbf4278d16b9c2de9ae5fc13d70a076e5d47edcf7ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22h9E6sku_7LI8r9PlPisY-It9oZR81szJ%22%3B%7D; _identity-backend=f78186b20b08d0feffc57554f50ec947a92b9a9c919645fffa113040b9002797a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2295%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '\"C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;\";C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\wamp\\bin\\php\\php5.6.25;C:\\Apache24\\bin;C:\\php;C:\\composer;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.yuda.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '62782'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519404178.009
+    'REQUEST_TIME' => 1519404178
+]

@@ -73,7 +73,8 @@ class CostNameController extends Controller
      */
     public function actionCreate()
     {
-    	if ( $_SESSION[ 'user' ][ 'role' ] == 1 || $_SESSION[ 'user' ][ 'role' ] == 14 || $_SESSION[ 'user' ][ 'role' ] == 10 ) {
+		$role = $_SESSION[ 'user' ][ 'role' ];
+    	if ( $role == 1 || $role == 14 || $role == 10 || $role == 7) {
 
     		$model = new CostName();
 
@@ -99,11 +100,12 @@ class CostNameController extends Controller
      */
     public function actionUpdate($id)
     {
-    	if ( $_SESSION[ 'user' ][ 'role' ] == 1 || $_SESSION[ 'user' ][ 'role' ] == 14 || $_SESSION[ 'user' ][ 'role' ] == 10 ) 
+		$role = $_SESSION[ 'user' ][ 'role' ];
+    	if ( $role == 1 || $role == 14 || $role == 10 || $role == 7) 
 		{
     		$model = $this->findModel( $id );
     		if ( $model->load( Yii::$app->request->post() ) && $model->save() ) {
-    			return $this->redirect( [ 'index' ] );
+    			return $this->redirect( Yii::$app->request->referrer );
     		} else {
     			return $this->renderAjax( 'update', [
     				'model' => $model,
