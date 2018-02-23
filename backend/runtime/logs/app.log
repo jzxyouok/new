@@ -17390,3 +17390,1606 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1519306204.419
     'REQUEST_TIME' => 1519306204
 ]
+2018-02-23 15:55:00 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\UserInvoice::save in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\BaseActiveRecord.php(295): yii\base\Component->__get('save')
+#1 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(183): yii\db\BaseActiveRecord->__get('save')
+#2 [internal function]: backend\controllers\UserInvoiceController->actionRead()
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('read', Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/re...', Array)
+#7 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2018-02-23 15:55:00 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'Hy_U5bfbjpHLaJX-yzIjk1KG5wK3giYjnjsotDf28iJGbuOv3pbc8qM89Kf-BXDbH-uoYYfXUFLMDGDQdqHAZg=='
+    'Up' => [
+        'file' => ''
+    ]
+]
+
+$_FILES = [
+    'Up' => [
+        'name' => [
+            'file' => 'invoice.xlsx'
+        ]
+        'type' => [
+            'file' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        ]
+        'tmp_name' => [
+            'file' => 'C:\\Windows\\Temp\\phpA9AE.tmp'
+        ]
+        'error' => [
+            'file' => 0
+        ]
+        'size' => [
+            'file' => 13049
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'vmb1lpo4q43ulmlc7vtc570r4k'
+    '_csrf-backend' => '676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/read'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '13577'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://www.wuye.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryUNZEVTEIffv1baoD'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/index?_togba4293ca=all'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=vmb1lpo4q43ulmlc7vtc570r4k; _csrf-backend=676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '61968'
+    'REDIRECT_URL' => '/user-invoice/read'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-invoice/read'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519372500.645
+    'REQUEST_TIME' => 1519372500
+]
+2018-02-23 15:55:34 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][error][Error] Error: Call to undefined function backend\controllers\rect() in C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php:220
+Stack trace:
+#0 [internal function]: backend\controllers\UserInvoiceController->actionRead()
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('read', Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/re...', Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#7 {main}
+2018-02-23 15:55:34 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'xdN5Eme6pHWka6ACiKGFSUiXT7raKSijALdFpAxCv5mckk5YDvf2Fsw_wVu9ltYBBfoA2ep8XtJSgA3ATRWN3Q=='
+    'Up' => [
+        'file' => ''
+    ]
+]
+
+$_FILES = [
+    'Up' => [
+        'name' => [
+            'file' => 'invoice.xlsx'
+        ]
+        'type' => [
+            'file' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        ]
+        'tmp_name' => [
+            'file' => 'C:\\Windows\\Temp\\php2C7C.tmp'
+        ]
+        'error' => [
+            'file' => 0
+        ]
+        'size' => [
+            'file' => 13049
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'vmb1lpo4q43ulmlc7vtc570r4k'
+    '_csrf-backend' => '676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/read'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '13577'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://www.wuye.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryfjpzxjhmKkj7AdBg'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/index?_togba4293ca=all'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=vmb1lpo4q43ulmlc7vtc570r4k; _csrf-backend=676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '62002'
+    'REDIRECT_URL' => '/user-invoice/read'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-invoice/read'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519372534.139
+    'REQUEST_TIME' => 1519372534
+]
+2018-02-23 15:56:08 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][error][Error] Error: Call to undefined function backend\controllers\redirect() in C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php:221
+Stack trace:
+#0 [internal function]: backend\controllers\UserInvoiceController->actionRead()
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('read', Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/re...', Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#7 {main}
+2018-02-23 15:56:08 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'MvBXiCzA5P3LWOqzGdLWd3O8v_TUdCZ06dPGZlrM_1BrsWDCRY22nqMMi-os5YU_PtHwl-QhUAW75I4CG5vNFA=='
+    'Up' => [
+        'file' => ''
+    ]
+]
+
+$_FILES = [
+    'Up' => [
+        'name' => [
+            'file' => 'invoice.xlsx'
+        ]
+        'type' => [
+            'file' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        ]
+        'tmp_name' => [
+            'file' => 'C:\\Windows\\Temp\\phpB266.tmp'
+        ]
+        'error' => [
+            'file' => 0
+        ]
+        'size' => [
+            'file' => 13049
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'vmb1lpo4q43ulmlc7vtc570r4k'
+    '_csrf-backend' => '676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/read'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '13577'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://www.wuye.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryt7reKX8buZvF3d4u'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/index?_togba4293ca=all'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=vmb1lpo4q43ulmlc7vtc570r4k; _csrf-backend=676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '62027'
+    'REDIRECT_URL' => '/user-invoice/read'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-invoice/read'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519372568.414
+    'REQUEST_TIME' => 1519372568
+]
+2018-02-23 15:56:44 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][error][Error] Error: Call to undefined function backend\controllers\redirect() in C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php:221
+Stack trace:
+#0 [internal function]: backend\controllers\UserInvoiceController->actionRead()
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('read', Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/re...', Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#7 {main}
+2018-02-23 15:56:44 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'Zcv3AZdizLGaaKCbOa519GcYb72PMaPJurslvbYO8II8isBL_i-e0vI8wcIMmSa8KnUg3r9k1bjojG3Z91nCxg=='
+    'Up' => [
+        'file' => ''
+    ]
+]
+
+$_FILES = [
+    'Up' => [
+        'name' => [
+            'file' => 'invoice.xlsx'
+        ]
+        'type' => [
+            'file' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        ]
+        'tmp_name' => [
+            'file' => 'C:\\Windows\\Temp\\php4001.tmp'
+        ]
+        'error' => [
+            'file' => 0
+        ]
+        'size' => [
+            'file' => 13049
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'vmb1lpo4q43ulmlc7vtc570r4k'
+    '_csrf-backend' => '676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/read'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '13577'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://www.wuye.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryUyoHSmLFqixr3TzB'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/index?_togba4293ca=all'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=vmb1lpo4q43ulmlc7vtc570r4k; _csrf-backend=676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '62049'
+    'REDIRECT_URL' => '/user-invoice/read'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-invoice/read'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519372604.653
+    'REQUEST_TIME' => 1519372604
+]
+2018-02-23 16:05:08 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '14-14-26845-2016-1-物业费' for key 'community_id_building_id_realestate_id_year_month_description' in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php:1252
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1252): PDOStatement->execute()
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1069): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(515): yii\db\Schema->insert('user_invoice', Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(481): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\BaseActiveRecord.php(669): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(183): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\UserInvoiceController->actionRead()
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('read', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/re...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '14-14-26845-2016-1-物业费' for key 'community_id_building_id_realestate_id_year_month_description'
+The SQL being executed was: INSERT INTO `user_invoice` (`community_id`, `building_id`, `realestate_id`, `description`, `year`, `month`, `invoice_amount`, `create_time`, `invoice_status`) VALUES (14, 14, 26845, '物业费', '2016', '1', '56', '1519373108', 0) in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php:663
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1257): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `us...')
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1069): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(515): yii\db\Schema->insert('user_invoice', Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(481): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\BaseActiveRecord.php(669): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(183): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\UserInvoiceController->actionRead()
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('read', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/re...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry '14-14-26845-2016-1-物业费' for key 'community_id_building_id_realestate_id_year_month_description'
+)
+
+2018-02-23 16:05:08 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'etoQmJ6oXUZuNwD8DlDeV4Ow9dZPVCZ5XtlX3tB8sMsjmyfS9-UPJQZjYaU7Z40fzt26tX8BUAgM7h-6kSuCjw=='
+    'Up' => [
+        'file' => ''
+    ]
+]
+
+$_FILES = [
+    'Up' => [
+        'name' => [
+            'file' => 'invoice.xlsx'
+        ]
+        'type' => [
+            'file' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        ]
+        'tmp_name' => [
+            'file' => 'C:\\Windows\\Temp\\phpEF26.tmp'
+        ]
+        'error' => [
+            'file' => 0
+        ]
+        'size' => [
+            'file' => 13049
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'vmb1lpo4q43ulmlc7vtc570r4k'
+    '_csrf-backend' => '676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/read'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '13577'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://www.wuye.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryuTY1bNmJy6OidPEN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/index?_togba4293ca=all'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=vmb1lpo4q43ulmlc7vtc570r4k; _csrf-backend=676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '62345'
+    'REDIRECT_URL' => '/user-invoice/read'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-invoice/read'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519373108.236
+    'REQUEST_TIME' => 1519373108
+]
+2018-02-23 16:06:42 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '14-14-26845-2016-1-物业费' for key 'community_id_building_id_realestate_id_year_month_description' in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php:1252
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1252): PDOStatement->execute()
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1069): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(515): yii\db\Schema->insert('user_invoice', Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(481): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\BaseActiveRecord.php(669): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(183): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\UserInvoiceController->actionRead()
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('read', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/re...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '14-14-26845-2016-1-物业费' for key 'community_id_building_id_realestate_id_year_month_description'
+The SQL being executed was: INSERT INTO `user_invoice` (`community_id`, `building_id`, `realestate_id`, `description`, `year`, `month`, `invoice_amount`, `create_time`, `invoice_status`) VALUES (14, 14, 26845, '物业费', '2016', '1', '56', '1519373202', 0) in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php:663
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1257): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `us...')
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1069): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(515): yii\db\Schema->insert('user_invoice', Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(481): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\BaseActiveRecord.php(669): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(183): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\UserInvoiceController->actionRead()
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('read', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/re...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry '14-14-26845-2016-1-物业费' for key 'community_id_building_id_realestate_id_year_month_description'
+)
+
+2018-02-23 16:06:42 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'ElIXXBMTBHVhbTfd9Xibub_v33drLAgkiSq0j_yx9lxLEyAWel5WFgk5VoTAT8jx8oKQFFt5flXbHfzrvebEGA=='
+    'Up' => [
+        'file' => ''
+    ]
+]
+
+$_FILES = [
+    'Up' => [
+        'name' => [
+            'file' => 'invoice.xlsx'
+        ]
+        'type' => [
+            'file' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        ]
+        'tmp_name' => [
+            'file' => 'C:\\Windows\\Temp\\php5D5D.tmp'
+        ]
+        'error' => [
+            'file' => 0
+        ]
+        'size' => [
+            'file' => 13050
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'vmb1lpo4q43ulmlc7vtc570r4k'
+    '_csrf-backend' => '676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/read'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '13578'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://www.wuye.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary93FFEzTra6ZC8MQE'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/index?_togba4293ca=all'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=vmb1lpo4q43ulmlc7vtc570r4k; _csrf-backend=676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '62420'
+    'REDIRECT_URL' => '/user-invoice/read'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-invoice/read'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519373201.979
+    'REQUEST_TIME' => 1519373201
+]
+2018-02-23 16:08:16 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '14-14-26845-2018-2-物业费' for key 'community_id_building_id_realestate_id_year_month_description' in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php:1252
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1252): PDOStatement->execute()
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1069): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(515): yii\db\Schema->insert('user_invoice', Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(481): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\BaseActiveRecord.php(669): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(183): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\UserInvoiceController->actionRead()
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('read', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/re...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '14-14-26845-2018-2-物业费' for key 'community_id_building_id_realestate_id_year_month_description'
+The SQL being executed was: INSERT INTO `user_invoice` (`community_id`, `building_id`, `realestate_id`, `description`, `year`, `month`, `invoice_amount`, `create_time`, `invoice_status`) VALUES (14, 14, 26845, '物业费', '2018', '2', '57', '1519373296', 0) in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php:663
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1257): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `us...')
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1069): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(515): yii\db\Schema->insert('user_invoice', Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(481): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\BaseActiveRecord.php(669): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(183): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\UserInvoiceController->actionRead()
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('read', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/re...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry '14-14-26845-2018-2-物业费' for key 'community_id_building_id_realestate_id_year_month_description'
+)
+
+2018-02-23 16:08:15 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => '7dyxwZ5m1SKFFtC5mMDk2p_GfgDb6ZyNy8GjlzveZ4S0nYaL9yuHQe1CseCt97eS0qsxY-u86vyZ9uvzeolVwA=='
+    'Up' => [
+        'file' => ''
+    ]
+]
+
+$_FILES = [
+    'Up' => [
+        'name' => [
+            'file' => 'invoice.xlsx'
+        ]
+        'type' => [
+            'file' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        ]
+        'tmp_name' => [
+            'file' => 'C:\\Windows\\Temp\\phpCB36.tmp'
+        ]
+        'error' => [
+            'file' => 0
+        ]
+        'size' => [
+            'file' => 13055
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'vmb1lpo4q43ulmlc7vtc570r4k'
+    '_csrf-backend' => '676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/read'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '13583'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://www.wuye.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary5VwuM7NFNAoXCQK8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/index?_togba4293ca=all'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=vmb1lpo4q43ulmlc7vtc570r4k; _csrf-backend=676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '62472'
+    'REDIRECT_URL' => '/user-invoice/read'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-invoice/read'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519373295.64
+    'REQUEST_TIME' => 1519373295
+]
+2018-02-23 16:17:32 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '14-14-26845-2018-1-电梯维护费' for key 'community_id_building_id_realestate_id_year_month_description' in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php:1252
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1252): PDOStatement->execute()
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1069): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(515): yii\db\Schema->insert('user_invoice', Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(481): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\BaseActiveRecord.php(669): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(183): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\UserInvoiceController->actionRead()
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('read', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/re...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '14-14-26845-2018-1-电梯维护费' for key 'community_id_building_id_realestate_id_year_month_description'
+The SQL being executed was: INSERT INTO `user_invoice` (`community_id`, `building_id`, `realestate_id`, `description`, `year`, `month`, `invoice_amount`, `create_time`, `invoice_status`) VALUES (14, 14, 26845, '电梯维护费', '2018', '1', '20', '1519373852', 0) in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php:663
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1257): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `us...')
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1069): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(515): yii\db\Schema->insert('user_invoice', Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(481): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\BaseActiveRecord.php(669): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(183): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\UserInvoiceController->actionRead()
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('read', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/re...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry '14-14-26845-2018-1-电梯维护费' for key 'community_id_building_id_realestate_id_year_month_description'
+)
+
+2018-02-23 16:17:32 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'OH8jOe-T-8FPk7sZknnGzMoeDX8ZljDoNRHfoIyaxp5hPhRzht6poifH2kCnTpWEh3NCHCnDRplnJpfEzc302g=='
+    'Up' => [
+        'file' => ''
+    ]
+]
+
+$_FILES = [
+    'Up' => [
+        'name' => [
+            'file' => 'invoice.xlsx'
+        ]
+        'type' => [
+            'file' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        ]
+        'tmp_name' => [
+            'file' => 'C:\\Windows\\Temp\\php4A6E.tmp'
+        ]
+        'error' => [
+            'file' => 0
+        ]
+        'size' => [
+            'file' => 13056
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'vmb1lpo4q43ulmlc7vtc570r4k'
+    '_csrf-backend' => '676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/read'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '13584'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://www.wuye.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarygM9RYjSPXhgzrlYM'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=vmb1lpo4q43ulmlc7vtc570r4k; _csrf-backend=676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '62868'
+    'REDIRECT_URL' => '/user-invoice/read'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-invoice/read'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519373852.497
+    'REQUEST_TIME' => 1519373852
+]
+2018-02-23 16:19:11 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '14-14-26845-2018-1-电梯维护费' for key 'community_id_building_id_realestate_id_year_month_description' in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php:1252
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1252): PDOStatement->execute()
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1069): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(515): yii\db\Schema->insert('user_invoice', Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(481): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\BaseActiveRecord.php(669): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(183): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\UserInvoiceController->actionRead()
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('read', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/re...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '14-14-26845-2018-1-电梯维护费' for key 'community_id_building_id_realestate_id_year_month_description'
+The SQL being executed was: INSERT INTO `user_invoice` (`community_id`, `building_id`, `realestate_id`, `description`, `year`, `month`, `invoice_amount`, `create_time`, `invoice_status`) VALUES (14, 14, 26845, '电梯维护费', '2018', '1', '20', '1519373951', 0) in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php:663
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1257): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `us...')
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Command.php(1069): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(515): yii\db\Schema->insert('user_invoice', Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\ActiveRecord.php(481): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\db\BaseActiveRecord.php(669): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(183): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\UserInvoiceController->actionRead()
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('read', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/re...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry '14-14-26845-2018-1-电梯维护费' for key 'community_id_building_id_realestate_id_year_month_description'
+)
+
+2018-02-23 16:19:11 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'K7BG3aSEfMp88S1xAOUc7CUHN0_ErSOTNxaH1uvhyxBy8XGXzckuqRSlTCg10k-kaGp4LPT4VeJlIc-yqrb5VA=='
+    'Up' => [
+        'file' => ''
+    ]
+]
+
+$_FILES = [
+    'Up' => [
+        'name' => [
+            'file' => 'invoice.xlsx'
+        ]
+        'type' => [
+            'file' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        ]
+        'tmp_name' => [
+            'file' => 'C:\\Windows\\Temp\\phpCBCF.tmp'
+        ]
+        'error' => [
+            'file' => 0
+        ]
+        'size' => [
+            'file' => 13056
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'vmb1lpo4q43ulmlc7vtc570r4k'
+    '_csrf-backend' => '676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/read'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '13584'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://www.wuye.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryJm0z7qKby9I3WbQV'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=vmb1lpo4q43ulmlc7vtc570r4k; _csrf-backend=676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '62943'
+    'REDIRECT_URL' => '/user-invoice/read'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-invoice/read'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519373951.145
+    'REQUEST_TIME' => 1519373951
+]
+2018-02-23 16:29:59 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: c in C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php:220
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(220): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\Apache24\\htd...', 220, Array)
+#1 [internal function]: backend\controllers\UserInvoiceController->actionRead()
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('read', Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/re...', Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2018-02-23 16:29:58 [127.0.0.1][64][vmb1lpo4q43ulmlc7vtc570r4k][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'VX23P8vj11fKYPJ5TZcw586I1D-nGTlEP0RPL4HEl8QMPIB1oq6FNKI0kyB4oGOvg-WbXJdMTzVtcwdLwJOlgA=='
+    'Up' => [
+        'file' => ''
+    ]
+]
+
+$_FILES = [
+    'Up' => [
+        'name' => [
+            'file' => 'invoice.xlsx'
+        ]
+        'type' => [
+            'file' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        ]
+        'tmp_name' => [
+            'file' => 'C:\\Windows\\Temp\\phpAE0F.tmp'
+        ]
+        'error' => [
+            'file' => 0
+        ]
+        'size' => [
+            'file' => 12405
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'vmb1lpo4q43ulmlc7vtc570r4k'
+    '_csrf-backend' => '676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/read'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '12933'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://www.wuye.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryNgWJZoPKhEPKDhv6'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=vmb1lpo4q43ulmlc7vtc570r4k; _csrf-backend=676184b5c59a37bc85abb8fb6ab51e6dd7626a165b6edd94f293c2eb5ad7a738a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22YA7JiMRchTaY57SHMmOc0UvqR7HdAW2D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '63344'
+    'REDIRECT_URL' => '/user-invoice/read'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-invoice/read'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519374598.882
+    'REQUEST_TIME' => 1519374598
+]

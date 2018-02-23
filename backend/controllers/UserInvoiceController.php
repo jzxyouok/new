@@ -85,7 +85,11 @@ class UserInvoiceController extends Controller {
 	{
 		$model = new Up();
 		$session = Yii::$app->session;
-		ini_set( 'memory_limit', '2048M' ); 
+		ini_set( 'memory_limit', '2048M' );// 调整PHP由默认占用内存为1024M(1GB)
+		//set_time_limit(300);
+		$t = 0; // 插入条数
+		$a = 0; // 失败条数
+		$h = 0; //重复条数		
 		
 		if ( Yii::$app->request->isPost ) {
 			$model->file = UploadedFile::getInstance( $model, 'file' );
@@ -117,25 +121,26 @@ class UserInvoiceController extends Controller {
 
 					$sheetData = $spreadsheet->getActiveSheet()->toArray( null, true, true, true );
 					unset( $sheetData[ '1' ] ); //去掉表头
+					$i = count($sheetData);
 				}
 
 				//查找费项信息
 				if ( $sheetData ) {
 					foreach ( $sheetData as $sheet ) {
-						
+						sleep(0.01);
 						if(count($sheet) != 9){
 							$session->setFlash('fail','3');
 							unlink($inputFileName);
 							return $this->redirect( Yii::$app->request->referrer );
 						}
-						
 						//获取小区
 						$c_id = CommunityBasic::find()->select( 'community_id' )->where( [ 'community_name' => $sheet[ 'A' ] ] )->asArray()->one();
 						if ( $c_id ) {
 							//获取楼宇
 							$b_id = CommunityBuilding::find()->select( [ 'building_id' ] )
 								->andwhere(['community_id' => $c_id['community_id']])
-								->andwhere( [ 'community_building.building_name' => $sheet[ 'B' ] ] )			->asArray()
+								->andwhere( [ 'community_building.building_name' => $sheet[ 'B' ] ] )			
+								->asArray()
 								->one();
 							
 							if ( $b_id ) {
@@ -148,54 +153,60 @@ class UserInvoiceController extends Controller {
 									->one();
 				
 								//获取费项
-								if ( $r_id ) {
+								if ( isset($r_id) ) {
 									//获取费项
 									$cost_id = CostName::find()->select( 'cost_id,cost_name' )->where( [ 'cost_name' => $sheet[ 'F' ] ] )->asArray()->one();
 									if ( $cost_id ) {
 										$y = (int)$sheet[ 'D' ];  //将年份转换为整数型，保证数据的单一性
 									    $m = (int)$sheet[ 'E' ]; //将月份转换为整数型，保证数据的单一性
-									    $d = $sheet[ 'F' ];
+									    $d = $cost_id[ 'cost_name' ];
 									    $price = (float)$sheet[ 'G' ]; //将金额数据进行处理，除了保证数据的单一性外只保留两位数
 									    $f = date( time() );
 									    $c = $c_id[ 'community_id' ];
 									    $b = $b_id[ 'building_id' ];
 									    $r = $r_id[ 'realestate_id' ];
+														
+										$model = new UserInvoice(); //实例化模型
+										//赋值给模型
+										$model->community_id = $c;
+										$model->building_id = $b;
+										$model->realestate_id = $r;
+										$model->description = $d;
+										$model->year = $y;
+										$model->month = $m;
+										$model->invoice_amount = $price;
+										$model->create_time = $f;
+										$model->invoice_status = (int)$sheet[ 'I' ];
+											
+										$e = $model->save(); //保存
 										
-										//插入数据库
-										$transaction = Yii::$app->db->beginTransaction(); //事务开始标记
-										try {
-											$sql = "insert ignore into user_invoice(community_id,building_id,realestate_id,description, year, month, invoice_amount,create_time,invoice_status)
-									values ($c,$b, $r, '$d', $y, $m, $price,$f,'0')";
-											$result = Yii::$app->db->createCommand( $sql )->execute();
-											$transaction->commit(); //事务提交标记
-
-										} catch ( \Exception $e ) {
-											print_r( $e );
-											exit;
-											$transaction->rollback(); // 事务滚回标记
-											return $this->redirect( Yii::$app->request->referrer ); //返回请求页面
+										if($e){
+											$t <= $i;
+											$t += 1;
+										}else{
+											$h <= $i;
+											$h += 1;
 										}
+											
 									} else {
-										echo "<script>alert('费项有误，请修改')</script>";
-										return $this->redirect( Yii::$app->request->referrer ); //返回请求页面
+										$a += 1;
+										continue;
 									}
 								} else {
-									echo "<script>alert('房号为空，请修改数据')</script>";
-									unlink($inputFileName);
-									return $this->redirect( Yii::$app->request->referrer ); //返回请求页面
+									$a += 1;
+									continue;
 								}
 							} else {
-								echo "<script>alert('楼宇为空，请修改数据')</script>";
-								unlink($inputFileName);
-								return $this->redirect( Yii::$app->request->referrer ); //返回请求页面
+								$a += 1;
+								continue;
 							}
 						} else {
-							echo "<script>alert('小区为空，请修改数据')</script>";
-							unlink($inputFileName);
-							return $this->redirect( Yii::$app->request->referrer ); //返回请求页面
+							$a += 1;
+							continue;
 						}
 					}
 				} else {
+					unlink($inputFileName);
 					return $this->redirect( Yii::$app->request->referrer ); //返回请求页面
 				}
 			}else{
@@ -203,8 +214,11 @@ class UserInvoiceController extends Controller {
 				return $this->redirect( Yii::$app->request->referrer ); //返回请求页面
 			}
 		}
-		unlink($inputFileName);
-		return $this->redirect( Yii::$app->request->referrer);
+		if(isset($inputFileName)){
+			unlink($inputFileName);
+		}
+		$con = "成功导入：". $t . "条！ - 失败：". $a . "条！ - 重复". $h. "条 - 合计：" . $i . "条";
+		echo "<script> alert('$con');parent.location.href='./'; </script>";
 	}
 
 	//批量删除

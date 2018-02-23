@@ -50,10 +50,9 @@ class UserInvoice extends \yii\db\ActiveRecord
             [['invoice_amount'], 'number'],
             [['create_time', 'invoice_notes', 'update_time'], 'string'],
             [['description'], 'string', 'max' => 200],
-            [['year', 'month'], 'string', 'max' => 32],
             [['order_id'], 'string', 'max' => 64],
             [['payment_time'], 'string', 'max' => 22],
-            [['community_id', 'building_id', 'realestate_id', 'description'], 'unique', 'targetAttribute' => ['community_id', 'building_id', 'realestate_id', 'description'], 'message' => '费项已存在，请勿重复提交', 'on' => ['update']],
+            [['community_id', 'building_id', 'realestate_id', 'year', 'month', 'description'], 'unique', 'targetAttribute' => ['community_id', 'building_id', 'realestate_id', 'year', 'month', 'description'], 'message' => '费项已存在，请勿重复提交'],
         ];
     }
 	
