@@ -43,15 +43,15 @@ use kartik\daterange\DateRangePicker;
 					</div>
 					<div class="col-lg-3">
 						<?= $form->field($model, 'building_id')->widget(DepDrop::classname(), [
-                'type' => DepDrop::TYPE_SELECT2,
-                'options'=>['id'=>'costrelation-building_id'],
-	            'select2Options'=>['pluginOptions'=>['allowClear'=>true]],
-                'pluginOptions'=>[
-                    'depends'=>['costrelation-community_id'],
-                    'placeholder'=>'请选择...',
-                    'url'=>Url::to(['/costrelation/b'])
-                ]
-            ]); ?>
+                            'type' => DepDrop::TYPE_SELECT2,
+                            'options'=>['id'=>'costrelation-building_id'],
+	                        'select2Options'=>['pluginOptions'=>['allowClear'=>true]],
+                            'pluginOptions'=>[
+                                'depends'=>['costrelation-community_id'],
+                                'placeholder'=>'请选择...',
+                                'url'=>Url::to(['/costrelation/b'])
+                            ]
+                        ]); ?>
 					</div>
 
 					<div class="col-lg-3">

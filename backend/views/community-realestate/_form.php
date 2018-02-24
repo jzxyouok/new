@@ -53,10 +53,10 @@ use kartik\ select2\ Select2;
                         ]); ?>
 					</div>
 					<div class="col-lg-2">
-						<?= $form->field($model, 'room_name')->textInput(['maxlength' => true/*,'readonly' => true*/]) ?>
+						<?= $form->field($model, 'room_number')->textInput(['maxlength' => true/*,'readonly' => true*/]) ?>
 					</div>
 					<div class="col-lg-3">
-						<?= $form->field($model, 'room_number')->textInput(['placeholder' => '请输入房号']) ?>
+						<?= $form->field($model, 'room_name')->textInput(['placeholder' => '请输入房号']) ?>
 					</div>
 				</div>
 

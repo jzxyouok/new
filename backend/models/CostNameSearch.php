@@ -48,6 +48,12 @@ class CostNameSearch extends CostName
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+			'sort' => [
+		    	'defaultOrder' => [
+		        	'level' => SORT_ASC,
+			        'cost_id' => SORT_DESC,
+		        ]
+		    ]
         ]);
 
         $this->load($params);

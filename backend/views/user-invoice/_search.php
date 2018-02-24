@@ -38,7 +38,7 @@ use app\models\CommunityBuilding;
 	       		<?= $form->field($model, 'building.building_name')->textInput() ?>
 	       	</div>
 	       	<div class="col-lg-1">
-	       		<?= $form->field($model, 'room.room_number') ?>
+	       		<?= $form->field($model, 'room.room_name') ?>
 	       	</div>
 	       	<div class="col-lg-2">
 	       		<?= $form->field($model, 'description') ?>
@@ -62,9 +62,6 @@ use app\models\CommunityBuilding;
     </tr>
   </tbody>
 </table>
-
-
-	
 
     <?php // echo $form->field($model, 'year') ?>
 

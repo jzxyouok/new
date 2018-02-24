@@ -85,8 +85,8 @@ class UserInvoiceController extends Controller {
 	{
 		$model = new Up();
 		$session = Yii::$app->session;
-		ini_set( 'memory_limit', '2048M' );// 调整PHP由默认占用内存为1024M(1GB)
-		//set_time_limit(300);
+		ini_set( 'memory_limit', '2048M' );// 调整PHP由默认占用内存为2048M(2GB)
+		set_time_limit(600); //等待时间是10分钟
 		$t = 0; // 插入条数
 		$a = 0; // 失败条数
 		$h = 0; //重复条数		
@@ -224,19 +224,16 @@ class UserInvoiceController extends Controller {
 	//批量删除
 	public function actionDel() 
 	{
-		//$this->enableCsrfValidation = false; //去掉yii2的post验证
 		$ids = Yii::$app->request->post();
-
-		if ( $_SESSION[ 'user' ][ 'name' ] != 'admin' ) {
-			return $this->redirect( Yii::$app->request->referrer );
-		} else {
-			foreach ( $ids as $id );
+		$role = $_SESSION[ 'user' ][ 'role' ];
+		
+		if ( $role == 1 || $role == 7 || $role == 10 || $role == 14 ) {
 			//删除代码
+			foreach ( $ids as $id );
 			foreach ( $id as $i ) {
 				$this->findModel( $id )->delete();
 			}
 		}
-
 		return $this->redirect( Yii::$app->request->referrer );//返回请求页面
 	}
 
@@ -392,7 +389,10 @@ class UserInvoiceController extends Controller {
 
 	//批量生成费项
 	public function actionAdd() 
-	{		
+	{
+		ini_set( 'memory_limit', '2048M' );// 调整PHP由默认占用内存为2048M(2GB)
+		set_time_limit(900); //等待时间是10分钟
+		
 		if($_SESSION[ 'user' ][ 'name' ] == 'admin'){
 			$query = ( new\ yii\ db\ Query() )->select( [
 			'community_realestate.community_id',
@@ -441,6 +441,7 @@ class UserInvoiceController extends Controller {
 		$i = count( $query );
 		
 		foreach ( $query as $q ) {
+			sleep(0.01);
 			$community = $q[ 'community_id' ];
 			$building = $q[ 'building_id' ];
 			$realestate = $q[ 'realestate_id' ];
@@ -449,10 +450,7 @@ class UserInvoiceController extends Controller {
 			$d = $y . "年" . $m . "月份" . $description;
 			$price = $q[ 'price' ];
 			$acreage = $q[ 'acreage' ];
-			
-			set_time_limit(120);
-			ini_set('memory_limit','512M');// 调整PHP由默认占用内存为1024M(1GB)
-			
+						
 			if ( $description == "物业费" ) {
 				$price = $price * $acreage;
 				$sql = "insert ignore into user_invoice(community_id,building_id,realestate_id,description, year, month, invoice_amount,create_time,invoice_status)

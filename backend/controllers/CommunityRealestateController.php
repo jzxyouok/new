@@ -246,6 +246,7 @@ class CommunityRealestateController extends Controller
     public function actionCreate()
     {
         $model = new CommunityRealestate();
+		$model->setScenario('create');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->realestate_id]);

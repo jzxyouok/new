@@ -146,7 +146,7 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 			'width' => '80px'
 		],
 
-		[ 'attribute' => 'room.room_number',
+		[ 'attribute' => 'room.room_name',
 			//'value' => 'room.room_number',
 			// 'group' => true,
 			'hAlign' => 'center',
