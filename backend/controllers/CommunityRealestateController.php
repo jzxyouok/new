@@ -71,6 +71,7 @@ class CommunityRealestateController extends Controller
 		$b = 0; // 插入条数
 		$c = 0; // 失败条数
 		$h = 0; //重复条数
+		$comm = $_SESSION['user']['community'];
 		
 		if ( Yii::$app->request->isPost ) {
 			$model->file = UploadedFile::getInstance( $model, 'file' );
@@ -115,59 +116,118 @@ class CommunityRealestateController extends Controller
 					
 					//获取小区
 					$c_id = CommunityBasic::find()->select( 'community_id' )->where( [ 'community_name' => $sheet[ 'A' ] ] )->asArray()->one();
-					if($c_id){
-						//获取楼宇
-						$b_id = CommunityBuilding::find()->select( [ 'building_id' ] )
-								->andwhere( [ 'community_building.building_name' => $sheet[ 'B' ] ] )
-								->andwhere(['community_id' => $c_id['community_id']])->asArray()->one();
-						if($b_id){
-							//获取房屋编号
-							$r_id = CommunityRealestate::find()->select( [ 'realestate_id' ] )
-                                ->andwhere(['community_id' => $c_id['community_id']])
-                                ->where( [ 'building_id' => $b_id['building_id'] ] )
-                                ->andwhere( [ 'room_name' => $sheet[ 'D' ] ] )
-                                ->asArray()
-                                ->one();
-							if(!empty($r_id)){
-								//更新数据库记录
-								$d = CommunityRealestate::updateAll(['acreage' => $sheet[ 'G' ]], 'realestate_id = :id',[':id' => $r_id['realestate_id']]);
-								if ( $d ) {
-			                    	$a <= $i;
-			                    	$a += 1;
-			                    }else {
-			                    	$h <= $i;
-			                    	$h += 1;
-			                    }
-							}elseif(!empty($c_id) && !empty($b_id)){
-								//插入新记录
-								$model = new CommunityRealestate();
-								$model->community_id = (int)$c_id['community_id']; //小区
-								$model->building_id = (int)$b_id['building_id'];//楼宇
-								$model->room_number = (int)$sheet['C']; //单元
-								$model->room_name = $sheet['D'];//房号
-								$model->owners_name = $sheet['E'];
-								$model->owners_cellphone = (int)$sheet['F'];//手机号码
-								$model->acreage = (int)$sheet['G'];
-											
-								$e = $model->save(); //保存
-								if( $e ){
-									$b <= $i;
-									$b += 1;
-								}else{
-									$c <= $i;
-									$c += 1;
-								}
-							}else{
-								$c += 1;
-								continue;
-							}
-						}else{
-							$c += 1;
-							continue;
-						}
+					if(empty($comm)){
+						//管理员账号操作
+						if($c_id){
+						    //获取楼宇
+						    $b_id = CommunityBuilding::find()->select( [ 'building_id' ] )
+						    		->andwhere( [ 'community_building.building_name' => $sheet[ 'B' ] ] )
+						    		->andwhere(['community_id' => $c_id['community_id']])->asArray()->one();
+						    if($b_id){
+						    	//获取房屋编号
+						    	$r_id = CommunityRealestate::find()->select( [ 'realestate_id' ] )
+                                    ->andwhere(['community_id' => $c_id['community_id']])
+                                    ->where( [ 'building_id' => $b_id['building_id'] ] )
+                                    ->andwhere( [ 'room_name' => $sheet[ 'D' ] ] )
+                                    ->asArray()
+                                    ->one();
+						    	if(!empty($r_id)){
+						    		//更新数据库记录
+						     		$d = CommunityRealestate::updateAll(['acreage' => $sheet[ 'G' ]], 'realestate_id = :id',[':id' => $r_id['realestate_id']]);
+						    		if ( $d ) {
+			                        	$a <= $i;
+			                        	$a += 1;
+			                        }else {
+			                        	$h <= $i;
+			                        	$h += 1;
+			                        }
+						    	}elseif(!empty($c_id) && !empty($b_id)){
+						    		//插入新记录
+						    		$model = new CommunityRealestate();
+						    		$model->community_id = (int)$c_id['community_id']; //小区
+						    		$model->building_id = (int)$b_id['building_id'];//楼宇
+						    		$model->room_number = (int)$sheet['C']; //单元
+						    		$model->room_name = $sheet['D'];//房号
+						    		$model->owners_name = $sheet['E'];
+						    		$model->owners_cellphone = (int)$sheet['F'];//手机号码
+						    		$model->acreage = (int)$sheet['G'];
+						    					
+						    		$e = $model->save(); //保存
+						    		if( $e ){
+						    			$b <= $i;
+						    			$b += 1;
+						    		}else{
+						    			$c <= $i;
+						    			$c += 1;
+						    		}
+						    	}else{
+						    		$c += 1;
+						    		continue;
+						    	}
+						    }else{
+						    	$c += 1;
+						    	continue;
+						    }
+					    }else{
+					    	$c += 1;
+					    	continue;
+					    }
 					}else{
-						$c += 1;
-						continue;
+						//前台账户操作
+					    if($c_id && $c_id == $comm['community_id']){
+					    	//获取楼宇
+					    	$b_id = CommunityBuilding::find()->select( [ 'building_id' ] )
+					    			->andwhere( [ 'community_building.building_name' => $sheet[ 'B' ] ] )
+					    			->andwhere(['community_id' => $c_id['community_id']])->asArray()->one();
+					    	if($b_id){    
+							    //获取房屋编号
+							    $r_id = CommunityRealestate::find()->select( [ 'realestate_id' ] )
+                                    ->andwhere(['community_id' => $c_id['community_id']])
+                                    ->where( [ 'building_id' => $b_id['building_id'] ] )
+                                    ->andwhere( [ 'room_name' => $sheet[ 'D' ] ] )
+                                    ->asArray()
+                                    ->one();
+							    if(!empty($r_id)){
+							    	//更新数据库记录
+							    	$d = CommunityRealestate::updateAll(['acreage' => $sheet[ 'G' ]], 'realestate_id = :id',[':id' => $r_id['realestate_id']]);
+							    	if ( $d ) {
+			                        	$a <= $i;
+			                        	$a += 1;
+			                        }else {
+			                        	$h <= $i;
+			                        	$h += 1;
+			                        }
+							    }elseif(!empty($c_id) && !empty($b_id)){
+							    	//插入新记录
+							    	$model = new CommunityRealestate();
+							    	$model->community_id = (int)$c_id['community_id']; //小区
+							    	$model->building_id = (int)$b_id['building_id'];//楼宇
+							    	$model->room_number = (int)$sheet['C']; //单元
+							    	$model->room_name = $sheet['D'];//房号
+							    	$model->owners_name = $sheet['E'];
+							    	$model->owners_cellphone = (int)$sheet['F'];//手机号码
+							    	$model->acreage = (int)$sheet['G'];
+							    				
+							    	$e = $model->save(); //保存
+							    	if( $e ){
+							    		$b <= $i;
+							    		$b += 1;
+							    	}else{
+							    		$c <= $i;
+							    		$c += 1;
+							    	}
+							    }else{
+							    	$c += 1;
+							    	continue;
+							    }
+						     }else{
+					        		$c += 1;
+					        		continue;
+					        	}
+					    }else{
+					    	$c += 1;
+					    	continue;
+					    }
 					}
 				}
 			}else{
