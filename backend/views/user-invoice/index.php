@@ -12,7 +12,7 @@ use kartik\ form\ ActiveForm;
 
 Modal::begin( [
 	'id' => 'update-modal',
-	'header' => '<h4 class="modal-title">订单详情</h4>',
+	'header' => '<h4 class="modal-title">费项管理</h4>',
 	//'footer' => '<a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>',
 ] );
 $requestUpdateUrl = Url::toRoute( 'view' );

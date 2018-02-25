@@ -282,3 +282,2452 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1519435498.299
     'REQUEST_TIME' => 1519435498
 ]
+2018-02-25 09:54:06 [127.0.0.1][64][64o5fqslpt31t7utgjldh9bft6][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: building in C:\Apache24\htdocs\new\backend\views\community-realestate\index.php:146
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\views\community-realestate\index.php(146): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\Apache24\\htd...', 146, Array)
+#1 [internal function]: yii\base\View->{closure}(Object(app\models\CommunityRealestate), 176, 0, Object(kartik\grid\DataColumn))
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\grid\DataColumn.php(230): call_user_func(Object(Closure), Object(app\models\CommunityRealestate), 176, 0, Object(kartik\grid\DataColumn))
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\grid\DataColumn.php(244): yii\grid\DataColumn->getDataCellValue(Object(app\models\CommunityRealestate), 176, 0)
+#4 C:\Apache24\htdocs\new\vendor\kartik-v\yii2-grid\DataColumn.php(354): yii\grid\DataColumn->renderDataCellContent(Object(app\models\CommunityRealestate), 176, 0)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\grid\GridView.php(519): kartik\grid\DataColumn->renderDataCell(Object(app\models\CommunityRealestate), 176, 0)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\grid\GridView.php(488): yii\grid\GridView->renderTableRow(Object(app\models\CommunityRealestate), 176, 0)
+#7 C:\Apache24\htdocs\new\vendor\kartik-v\yii2-grid\GridView.php(1054): yii\grid\GridView->renderTableBody()
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\grid\GridView.php(352): kartik\grid\GridView->renderTableBody()
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\widgets\BaseListView.php(160): yii\grid\GridView->renderItems()
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\grid\GridView.php(321): yii\widgets\BaseListView->renderSection('{items}')
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#12 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#13 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback('/{\\w+}/', Object(Closure), '<div class="pan...')
+#14 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\grid\GridView.php(296): yii\widgets\BaseListView->run()
+#15 C:\Apache24\htdocs\new\vendor\kartik-v\yii2-grid\GridView.php(1025): yii\grid\GridView->run()
+#16 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Widget.php(140): kartik\grid\GridView->run()
+#17 C:\Apache24\htdocs\new\backend\views\community-realestate\index.php(241): yii\base\Widget::widget(Array)
+#18 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(336): require('C:\\Apache24\\htd...')
+#19 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Apache24\\htd...', Array)
+#20 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Apache24\\htd...', Array, Object(backend\controllers\CommunityRealestateController))
+#21 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\CommunityRealestateController))
+#22 C:\Apache24\htdocs\new\backend\controllers\CommunityRealestateController.php(51): yii\base\Controller->render('index', Array)
+#23 [internal function]: backend\controllers\CommunityRealestateController->actionIndex()
+#24 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#25 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#26 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#27 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('community-reale...', Array)
+#28 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#30 {main}
+2018-02-25 09:54:06 [127.0.0.1][64][64o5fqslpt31t7utgjldh9bft6][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '64o5fqslpt31t7utgjldh9bft6'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+    '_csrf-backend' => '00c7a07650ad3c787292a36a06d4f03d55a5849d70081fa660c992a89491778ea:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"KeAiWM9_JRhUMgj8ZE75rVQIRcO7oiz1\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'community-realestate/index'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.wuye.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=64o5fqslpt31t7utgjldh9bft6; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D; _csrf-backend=00c7a07650ad3c787292a36a06d4f03d55a5849d70081fa660c992a89491778ea%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22KeAiWM9_JRhUMgj8ZE75rVQIRcO7oiz1%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '56030'
+    'REDIRECT_URL' => '/community-realestate/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/community-realestate/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519523646.525
+    'REQUEST_TIME' => 1519523646
+]
+2018-02-25 09:54:29 [127.0.0.1][64][64o5fqslpt31t7utgjldh9bft6][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\bootstrap\ActiveField::addon in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Component.php:209
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\BaseYii.php(546): yii\base\Component->__set('addon', Array)
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure(Object(yii\bootstrap\ActiveField), Array)
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2-bootstrap\src\ActiveField.php(155): yii\base\BaseObject->__construct(Array)
+#3 [internal function]: yii\bootstrap\ActiveField->__construct(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\bootstrap\\A...', Array, Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\bootstrap\\A...', Array, Array)
+#7 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\widgets\ActiveForm.php(334): yii\BaseYii::createObject(Array)
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2-bootstrap\src\ActiveForm.php(107): yii\widgets\ActiveForm->field(Object(app\models\CostRelation), 'from', Array)
+#9 C:\Apache24\htdocs\new\backend\views\costrelation\form.php(67): yii\bootstrap\ActiveForm->field(Object(app\models\CostRelation), 'from', Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(336): require('C:\\Apache24\\htd...')
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Apache24\\htd...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\View.php(212): yii\base\View->renderFile('C:\\Apache24\\htd...', Array, Object(backend\controllers\CostrelationController))
+#13 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Controller.php(49): yii\web\View->renderAjax('form', Array, Object(backend\controllers\CostrelationController))
+#14 C:\Apache24\htdocs\new\backend\controllers\CostrelationController.php(283): yii\web\Controller->renderAjax('form', Array)
+#15 [internal function]: backend\controllers\CostrelationController->actionCreate1('176')
+#16 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#17 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create1', Array)
+#19 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('costrelation/cr...', Array)
+#20 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#22 {main}
+2018-02-25 09:54:29 [127.0.0.1][64][64o5fqslpt31t7utgjldh9bft6][info][application] $_GET = [
+    'id' => '176'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '64o5fqslpt31t7utgjldh9bft6'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+    '_csrf-backend' => '00c7a07650ad3c787292a36a06d4f03d55a5849d70081fa660c992a89491778ea:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"KeAiWM9_JRhUMgj8ZE75rVQIRcO7oiz1\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'costrelation/create1'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_CSRF_TOKEN' => '6bdvxjV4BXNhCQxT5771WNDS3cD7Ju0LzHm_49vYE5Ki0i6vYjU8LCtbZAaq2Z9gipfq9YlwvEKeGvDUtLFpow=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.wuye.com/community-realestate/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=64o5fqslpt31t7utgjldh9bft6; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D; _csrf-backend=00c7a07650ad3c787292a36a06d4f03d55a5849d70081fa660c992a89491778ea%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22KeAiWM9_JRhUMgj8ZE75rVQIRcO7oiz1%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '56066'
+    'REDIRECT_URL' => '/costrelation/create1'
+    'REDIRECT_QUERY_STRING' => 'id=176'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=176'
+    'REQUEST_URI' => '/costrelation/create1?id=176'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519523669.814
+    'REQUEST_TIME' => 1519523669
+]
+2018-02-25 09:55:29 [127.0.0.1][64][64o5fqslpt31t7utgjldh9bft6][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\bootstrap\ActiveField::addon in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Component.php:209
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\BaseYii.php(546): yii\base\Component->__set('addon', Array)
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure(Object(yii\bootstrap\ActiveField), Array)
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2-bootstrap\src\ActiveField.php(155): yii\base\BaseObject->__construct(Array)
+#3 [internal function]: yii\bootstrap\ActiveField->__construct(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\bootstrap\\A...', Array, Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\bootstrap\\A...', Array, Array)
+#7 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\widgets\ActiveForm.php(334): yii\BaseYii::createObject(Array)
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2-bootstrap\src\ActiveForm.php(107): yii\widgets\ActiveForm->field(Object(app\models\CostRelation), 'from', Array)
+#9 C:\Apache24\htdocs\new\backend\views\costrelation\form.php(67): yii\bootstrap\ActiveForm->field(Object(app\models\CostRelation), 'from', Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(336): require('C:\\Apache24\\htd...')
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Apache24\\htd...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\View.php(212): yii\base\View->renderFile('C:\\Apache24\\htd...', Array, Object(backend\controllers\CostrelationController))
+#13 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Controller.php(49): yii\web\View->renderAjax('form', Array, Object(backend\controllers\CostrelationController))
+#14 C:\Apache24\htdocs\new\backend\controllers\CostrelationController.php(283): yii\web\Controller->renderAjax('form', Array)
+#15 [internal function]: backend\controllers\CostrelationController->actionCreate1('251')
+#16 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#17 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create1', Array)
+#19 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('costrelation/cr...', Array)
+#20 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#22 {main}
+2018-02-25 09:55:28 [127.0.0.1][64][64o5fqslpt31t7utgjldh9bft6][info][application] $_GET = [
+    'id' => '251'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '64o5fqslpt31t7utgjldh9bft6'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+    '_csrf-backend' => '00c7a07650ad3c787292a36a06d4f03d55a5849d70081fa660c992a89491778ea:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"KeAiWM9_JRhUMgj8ZE75rVQIRcO7oiz1\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'costrelation/create1'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_CSRF_TOKEN' => '6bdvxjV4BXNhCQxT5771WNDS3cD7Ju0LzHm_49vYE5Ki0i6vYjU8LCtbZAaq2Z9gipfq9YlwvEKeGvDUtLFpow=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.wuye.com/community-realestate/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=64o5fqslpt31t7utgjldh9bft6; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D; _csrf-backend=00c7a07650ad3c787292a36a06d4f03d55a5849d70081fa660c992a89491778ea%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22KeAiWM9_JRhUMgj8ZE75rVQIRcO7oiz1%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '56140'
+    'REDIRECT_URL' => '/costrelation/create1'
+    'REDIRECT_QUERY_STRING' => 'id=251'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=251'
+    'REQUEST_URI' => '/costrelation/create1?id=251'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519523728.852
+    'REQUEST_TIME' => 1519523728
+]
+2018-02-25 09:56:31 [127.0.0.1][64][64o5fqslpt31t7utgjldh9bft6][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\bootstrap\ActiveField::addon in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Component.php:209
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\BaseYii.php(546): yii\base\Component->__set('addon', Array)
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure(Object(yii\bootstrap\ActiveField), Array)
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2-bootstrap\src\ActiveField.php(155): yii\base\BaseObject->__construct(Array)
+#3 [internal function]: yii\bootstrap\ActiveField->__construct(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\bootstrap\\A...', Array, Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\bootstrap\\A...', Array, Array)
+#7 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\widgets\ActiveForm.php(334): yii\BaseYii::createObject(Array)
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2-bootstrap\src\ActiveForm.php(107): yii\widgets\ActiveForm->field(Object(app\models\CostRelation), 'from', Array)
+#9 C:\Apache24\htdocs\new\backend\views\costrelation\form.php(67): yii\bootstrap\ActiveForm->field(Object(app\models\CostRelation), 'from', Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(336): require('C:\\Apache24\\htd...')
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Apache24\\htd...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\View.php(212): yii\base\View->renderFile('C:\\Apache24\\htd...', Array, Object(backend\controllers\CostrelationController))
+#13 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Controller.php(49): yii\web\View->renderAjax('form', Array, Object(backend\controllers\CostrelationController))
+#14 C:\Apache24\htdocs\new\backend\controllers\CostrelationController.php(283): yii\web\Controller->renderAjax('form', Array)
+#15 [internal function]: backend\controllers\CostrelationController->actionCreate1('253')
+#16 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#17 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create1', Array)
+#19 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('costrelation/cr...', Array)
+#20 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#22 {main}
+2018-02-25 09:56:31 [127.0.0.1][64][64o5fqslpt31t7utgjldh9bft6][info][application] $_GET = [
+    'id' => '253'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '64o5fqslpt31t7utgjldh9bft6'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+    '_csrf-backend' => '00c7a07650ad3c787292a36a06d4f03d55a5849d70081fa660c992a89491778ea:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"KeAiWM9_JRhUMgj8ZE75rVQIRcO7oiz1\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'costrelation/create1'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_CSRF_TOKEN' => '6bdvxjV4BXNhCQxT5771WNDS3cD7Ju0LzHm_49vYE5Ki0i6vYjU8LCtbZAaq2Z9gipfq9YlwvEKeGvDUtLFpow=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.wuye.com/community-realestate/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=64o5fqslpt31t7utgjldh9bft6; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D; _csrf-backend=00c7a07650ad3c787292a36a06d4f03d55a5849d70081fa660c992a89491778ea%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22KeAiWM9_JRhUMgj8ZE75rVQIRcO7oiz1%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '56244'
+    'REDIRECT_URL' => '/costrelation/create1'
+    'REDIRECT_QUERY_STRING' => 'id=253'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=253'
+    'REQUEST_URI' => '/costrelation/create1?id=253'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519523791.227
+    'REQUEST_TIME' => 1519523791
+]
+2018-02-25 09:56:59 [127.0.0.1][64][vck40ksi4hff7vftl53c7itc3q][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\bootstrap\ActiveField::addon in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Component.php:209
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\BaseYii.php(546): yii\base\Component->__set('addon', Array)
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure(Object(yii\bootstrap\ActiveField), Array)
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2-bootstrap\src\ActiveField.php(155): yii\base\BaseObject->__construct(Array)
+#3 [internal function]: yii\bootstrap\ActiveField->__construct(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\bootstrap\\A...', Array, Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\bootstrap\\A...', Array, Array)
+#7 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\widgets\ActiveForm.php(334): yii\BaseYii::createObject(Array)
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2-bootstrap\src\ActiveForm.php(107): yii\widgets\ActiveForm->field(Object(app\models\CostRelation), 'from', Array)
+#9 C:\Apache24\htdocs\new\backend\views\costrelation\form.php(67): yii\bootstrap\ActiveForm->field(Object(app\models\CostRelation), 'from', Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(336): require('C:\\Apache24\\htd...')
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Apache24\\htd...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\View.php(212): yii\base\View->renderFile('C:\\Apache24\\htd...', Array, Object(backend\controllers\CostrelationController))
+#13 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Controller.php(49): yii\web\View->renderAjax('form', Array, Object(backend\controllers\CostrelationController))
+#14 C:\Apache24\htdocs\new\backend\controllers\CostrelationController.php(283): yii\web\Controller->renderAjax('form', Array)
+#15 [internal function]: backend\controllers\CostrelationController->actionCreate1('176')
+#16 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#17 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create1', Array)
+#19 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('costrelation/cr...', Array)
+#20 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#22 {main}
+2018-02-25 09:56:59 [127.0.0.1][64][vck40ksi4hff7vftl53c7itc3q][info][application] $_GET = [
+    'id' => '176'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => '327a752255843239ff7451c25fab923305f3bac4901f5bdf2486b925b2e80feaa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"sYfiHI2tvXS6yTmXXAvDs-NyPPpuW7FB\";}'
+    'advanced-backend' => 'vck40ksi4hff7vftl53c7itc3q'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'costrelation/create1'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_X_CSRF_TOKEN' => 'iuB21M3WN0CqpyArA4bew0Z4s5XaUB3QNGIFQDQz0m35uRC9hZ8FNNz_cx160rObHjnF0al9U6lkMnU1YwSULw=='
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.wuye.com/community-realestate/index'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-Hans-CN,zh-Hans;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf-backend=327a752255843239ff7451c25fab923305f3bac4901f5bdf2486b925b2e80feaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22sYfiHI2tvXS6yTmXXAvDs-NyPPpuW7FB%22%3B%7D; advanced-backend=vck40ksi4hff7vftl53c7itc3q; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '56344'
+    'REDIRECT_URL' => '/costrelation/create1'
+    'REDIRECT_QUERY_STRING' => 'id=176'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=176'
+    'REQUEST_URI' => '/costrelation/create1?id=176'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519523819.502
+    'REQUEST_TIME' => 1519523819
+]
+2018-02-25 09:57:01 [127.0.0.1][64][vck40ksi4hff7vftl53c7itc3q][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\bootstrap\ActiveField::addon in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Component.php:209
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\BaseYii.php(546): yii\base\Component->__set('addon', Array)
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure(Object(yii\bootstrap\ActiveField), Array)
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2-bootstrap\src\ActiveField.php(155): yii\base\BaseObject->__construct(Array)
+#3 [internal function]: yii\bootstrap\ActiveField->__construct(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\bootstrap\\A...', Array, Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\bootstrap\\A...', Array, Array)
+#7 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\widgets\ActiveForm.php(334): yii\BaseYii::createObject(Array)
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2-bootstrap\src\ActiveForm.php(107): yii\widgets\ActiveForm->field(Object(app\models\CostRelation), 'from', Array)
+#9 C:\Apache24\htdocs\new\backend\views\costrelation\form.php(67): yii\bootstrap\ActiveForm->field(Object(app\models\CostRelation), 'from', Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(336): require('C:\\Apache24\\htd...')
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Apache24\\htd...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\View.php(212): yii\base\View->renderFile('C:\\Apache24\\htd...', Array, Object(backend\controllers\CostrelationController))
+#13 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Controller.php(49): yii\web\View->renderAjax('form', Array, Object(backend\controllers\CostrelationController))
+#14 C:\Apache24\htdocs\new\backend\controllers\CostrelationController.php(283): yii\web\Controller->renderAjax('form', Array)
+#15 [internal function]: backend\controllers\CostrelationController->actionCreate1('176')
+#16 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#17 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create1', Array)
+#19 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('costrelation/cr...', Array)
+#20 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#22 {main}
+2018-02-25 09:57:01 [127.0.0.1][64][vck40ksi4hff7vftl53c7itc3q][info][application] $_GET = [
+    'id' => '176'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => '327a752255843239ff7451c25fab923305f3bac4901f5bdf2486b925b2e80feaa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"sYfiHI2tvXS6yTmXXAvDs-NyPPpuW7FB\";}'
+    'advanced-backend' => 'vck40ksi4hff7vftl53c7itc3q'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'costrelation/create1'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_X_CSRF_TOKEN' => 'iuB21M3WN0CqpyArA4bew0Z4s5XaUB3QNGIFQDQz0m35uRC9hZ8FNNz_cx160rObHjnF0al9U6lkMnU1YwSULw=='
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.wuye.com/community-realestate/index'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-Hans-CN,zh-Hans;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf-backend=327a752255843239ff7451c25fab923305f3bac4901f5bdf2486b925b2e80feaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22sYfiHI2tvXS6yTmXXAvDs-NyPPpuW7FB%22%3B%7D; advanced-backend=vck40ksi4hff7vftl53c7itc3q; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '56345'
+    'REDIRECT_URL' => '/costrelation/create1'
+    'REDIRECT_QUERY_STRING' => 'id=176'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=176'
+    'REQUEST_URI' => '/costrelation/create1?id=176'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519523821.153
+    'REQUEST_TIME' => 1519523821
+]
+2018-02-25 09:57:07 [127.0.0.1][64][vck40ksi4hff7vftl53c7itc3q][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\bootstrap\ActiveField::addon in C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Component.php:209
+Stack trace:
+#0 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\BaseYii.php(546): yii\base\Component->__set('addon', Array)
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure(Object(yii\bootstrap\ActiveField), Array)
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2-bootstrap\src\ActiveField.php(155): yii\base\BaseObject->__construct(Array)
+#3 [internal function]: yii\bootstrap\ActiveField->__construct(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\bootstrap\\A...', Array, Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\bootstrap\\A...', Array, Array)
+#7 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\widgets\ActiveForm.php(334): yii\BaseYii::createObject(Array)
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2-bootstrap\src\ActiveForm.php(107): yii\widgets\ActiveForm->field(Object(app\models\CostRelation), 'from', Array)
+#9 C:\Apache24\htdocs\new\backend\views\costrelation\form.php(67): yii\bootstrap\ActiveForm->field(Object(app\models\CostRelation), 'from', Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(336): require('C:\\Apache24\\htd...')
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Apache24\\htd...', Array)
+#12 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\View.php(212): yii\base\View->renderFile('C:\\Apache24\\htd...', Array, Object(backend\controllers\CostrelationController))
+#13 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Controller.php(49): yii\web\View->renderAjax('form', Array, Object(backend\controllers\CostrelationController))
+#14 C:\Apache24\htdocs\new\backend\controllers\CostrelationController.php(283): yii\web\Controller->renderAjax('form', Array)
+#15 [internal function]: backend\controllers\CostrelationController->actionCreate1('176')
+#16 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#17 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create1', Array)
+#19 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('costrelation/cr...', Array)
+#20 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#22 {main}
+2018-02-25 09:57:07 [127.0.0.1][64][vck40ksi4hff7vftl53c7itc3q][info][application] $_GET = [
+    'id' => '176'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => '327a752255843239ff7451c25fab923305f3bac4901f5bdf2486b925b2e80feaa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"sYfiHI2tvXS6yTmXXAvDs-NyPPpuW7FB\";}'
+    'advanced-backend' => 'vck40ksi4hff7vftl53c7itc3q'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'costrelation/create1'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_X_CSRF_TOKEN' => 'iuB21M3WN0CqpyArA4bew0Z4s5XaUB3QNGIFQDQz0m35uRC9hZ8FNNz_cx160rObHjnF0al9U6lkMnU1YwSULw=='
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.wuye.com/community-realestate/index'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-Hans-CN,zh-Hans;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf-backend=327a752255843239ff7451c25fab923305f3bac4901f5bdf2486b925b2e80feaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22sYfiHI2tvXS6yTmXXAvDs-NyPPpuW7FB%22%3B%7D; advanced-backend=vck40ksi4hff7vftl53c7itc3q; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '56370'
+    'REDIRECT_URL' => '/costrelation/create1'
+    'REDIRECT_QUERY_STRING' => 'id=176'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=176'
+    'REQUEST_URI' => '/costrelation/create1?id=176'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519523827.543
+    'REQUEST_TIME' => 1519523827
+]
+2018-02-25 10:23:00 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: price in C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php:581
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(581): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\Apache24\\htd...', 581, Array)
+#1 [internal function]: backend\controllers\UserInvoiceController->actionOne()
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('one', Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/on...', Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2018-02-25 10:23:00 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][info][application] $_GET = [
+    'a' => [
+        'id' => '176'
+        'UserInvoice' => [
+            'year' => '2018'
+            'month' => [
+                0 => '4'
+                1 => '5'
+                2 => '6'
+            ]
+            'cost' => [
+                0 => '7'
+            ]
+        ]
+    ]
+    'c_name' => [
+        1 => '电梯维护费'
+        2 => '电梯电费'
+        3 => '物业费'
+        9 => '垃圾清运费'
+        17 => '测试'
+        18 => '水费'
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG\";}'
+    'advanced-backend' => 'taqh767hs8pnvdko3p50rhc63m'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/one'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/v?id=176&UserInvoice%5Byear%5D=&UserInvoice%5Byear%5D=2018&UserInvoice%5Bmonth%5D=&UserInvoice%5Bmonth%5D%5B%5D=4&UserInvoice%5Bmonth%5D%5B%5D=5&UserInvoice%5Bmonth%5D%5B%5D=6&UserInvoice%5Bcost%5D=&UserInvoice%5Bcost%5D%5B%5D=7'
+    'HTTP_COOKIE' => '_csrf-backend=c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG%22%3B%7D; advanced-backend=taqh767hs8pnvdko3p50rhc63m; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '56971'
+    'REDIRECT_URL' => '/user-invoice/one'
+    'REDIRECT_QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=5&a%5BUserInvoice%5D%5Bmonth%5D%5B2%5D=6&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=7&c_name%5B1%5D=%E7%94%B5%E6%A2%AF%E7%BB%B4%E6%8A%A4%E8%B4%B9&c_name%5B2%5D=%E7%94%B5%E6%A2%AF%E7%94%B5%E8%B4%B9&c_name%5B3%5D=%E7%89%A9%E4%B8%9A%E8%B4%B9&c_name%5B9%5D=%E5%9E%83%E5%9C%BE%E6%B8%85%E8%BF%90%E8%B4%B9&c_name%5B17%5D=%E6%B5%8B%E8%AF%95&c_name%5B18%5D=%E6%B0%B4%E8%B4%B9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=5&a%5BUserInvoice%5D%5Bmonth%5D%5B2%5D=6&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=7&c_name%5B1%5D=%E7%94%B5%E6%A2%AF%E7%BB%B4%E6%8A%A4%E8%B4%B9&c_name%5B2%5D=%E7%94%B5%E6%A2%AF%E7%94%B5%E8%B4%B9&c_name%5B3%5D=%E7%89%A9%E4%B8%9A%E8%B4%B9&c_name%5B9%5D=%E5%9E%83%E5%9C%BE%E6%B8%85%E8%BF%90%E8%B4%B9&c_name%5B17%5D=%E6%B5%8B%E8%AF%95&c_name%5B18%5D=%E6%B0%B4%E8%B4%B9'
+    'REQUEST_URI' => '/user-invoice/one?a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=5&a%5BUserInvoice%5D%5Bmonth%5D%5B2%5D=6&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=7&c_name%5B1%5D=%E7%94%B5%E6%A2%AF%E7%BB%B4%E6%8A%A4%E8%B4%B9&c_name%5B2%5D=%E7%94%B5%E6%A2%AF%E7%94%B5%E8%B4%B9&c_name%5B3%5D=%E7%89%A9%E4%B8%9A%E8%B4%B9&c_name%5B9%5D=%E5%9E%83%E5%9C%BE%E6%B8%85%E8%BF%90%E8%B4%B9&c_name%5B17%5D=%E6%B5%8B%E8%AF%95&c_name%5B18%5D=%E6%B0%B4%E8%B4%B9'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519525380.138
+    'REQUEST_TIME' => 1519525380
+]
+2018-02-25 11:02:59 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: c_name in C:\Apache24\htdocs\new\backend\views\user-invoice\v.php:75
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\views\user-invoice\v.php(75): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\Apache24\\htd...', 75, Array)
+#1 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(336): require('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Apache24\\htd...', Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Apache24\\htd...', Array, Object(backend\controllers\UserInvoiceController))
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('v', Array, Object(backend\controllers\UserInvoiceController))
+#5 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(540): yii\base\Controller->render('v', Array)
+#6 [internal function]: backend\controllers\UserInvoiceController->actionV()
+#7 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('v', Array)
+#10 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/v', Array)
+#11 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2018-02-25 11:02:59 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][info][application] $_GET = [
+    'id' => '176'
+    'UserInvoice' => [
+        'year' => '2018'
+        'month' => [
+            0 => '4'
+            1 => '12'
+        ]
+        'cost' => [
+            0 => '4'
+            1 => '7'
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG\";}'
+    'advanced-backend' => 'taqh767hs8pnvdko3p50rhc63m'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/v'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.wuye.com/community-realestate/index'
+    'HTTP_COOKIE' => '_csrf-backend=c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG%22%3B%7D; advanced-backend=taqh767hs8pnvdko3p50rhc63m; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '57788'
+    'REDIRECT_URL' => '/user-invoice/v'
+    'REDIRECT_QUERY_STRING' => 'id=176&UserInvoice%5Byear%5D=&UserInvoice%5Byear%5D=2018&UserInvoice%5Bmonth%5D=&UserInvoice%5Bmonth%5D%5B%5D=4&UserInvoice%5Bmonth%5D%5B%5D=12&UserInvoice%5Bcost%5D=&UserInvoice%5Bcost%5D%5B%5D=4&UserInvoice%5Bcost%5D%5B%5D=7'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=176&UserInvoice%5Byear%5D=&UserInvoice%5Byear%5D=2018&UserInvoice%5Bmonth%5D=&UserInvoice%5Bmonth%5D%5B%5D=4&UserInvoice%5Bmonth%5D%5B%5D=12&UserInvoice%5Bcost%5D=&UserInvoice%5Bcost%5D%5B%5D=4&UserInvoice%5Bcost%5D%5B%5D=7'
+    'REQUEST_URI' => '/user-invoice/v?id=176&UserInvoice%5Byear%5D=&UserInvoice%5Byear%5D=2018&UserInvoice%5Bmonth%5D=&UserInvoice%5Bmonth%5D%5B%5D=4&UserInvoice%5Bmonth%5D%5B%5D=12&UserInvoice%5Bcost%5D=&UserInvoice%5Bcost%5D%5B%5D=4&UserInvoice%5Bcost%5D%5B%5D=7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519527779.176
+    'REQUEST_TIME' => 1519527779
+]
+2018-02-25 11:03:27 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: c_name in C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php:549
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(549): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\Apache24\\htd...', 549, Array)
+#1 [internal function]: backend\controllers\UserInvoiceController->actionOne()
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('one', Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/on...', Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2018-02-25 11:03:27 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][info][application] $_GET = [
+    'a' => [
+        'id' => '176'
+        'UserInvoice' => [
+            'year' => '2018'
+            'month' => [
+                0 => '4'
+                1 => '12'
+            ]
+            'cost' => [
+                0 => '4'
+                1 => '7'
+            ]
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG\";}'
+    'advanced-backend' => 'taqh767hs8pnvdko3p50rhc63m'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/one'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/v?id=176&UserInvoice%5Byear%5D=&UserInvoice%5Byear%5D=2018&UserInvoice%5Bmonth%5D=&UserInvoice%5Bmonth%5D%5B%5D=4&UserInvoice%5Bmonth%5D%5B%5D=12&UserInvoice%5Bcost%5D=&UserInvoice%5Bcost%5D%5B%5D=4&UserInvoice%5Bcost%5D%5B%5D=7'
+    'HTTP_COOKIE' => '_csrf-backend=c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG%22%3B%7D; advanced-backend=taqh767hs8pnvdko3p50rhc63m; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '57802'
+    'REDIRECT_URL' => '/user-invoice/one'
+    'REDIRECT_QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'REQUEST_URI' => '/user-invoice/one?a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519527807.746
+    'REQUEST_TIME' => 1519527807
+]
+2018-02-25 11:17:13 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: realestate in C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php:590
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(590): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\Apache24\\htd...', 590, Array)
+#1 [internal function]: backend\controllers\UserInvoiceController->actionOne()
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('one', Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/on...', Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2018-02-25 11:17:13 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][info][application] $_GET = [
+    'a' => [
+        'id' => '176'
+        'UserInvoice' => [
+            'year' => '2018'
+            'month' => [
+                0 => '4'
+                1 => '12'
+            ]
+            'cost' => [
+                0 => '4'
+                1 => '7'
+            ]
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG\";}'
+    'advanced-backend' => 'taqh767hs8pnvdko3p50rhc63m'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/one'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/v?id=176&UserInvoice%5Byear%5D=&UserInvoice%5Byear%5D=2018&UserInvoice%5Bmonth%5D=&UserInvoice%5Bmonth%5D%5B%5D=4&UserInvoice%5Bmonth%5D%5B%5D=12&UserInvoice%5Bcost%5D=&UserInvoice%5Bcost%5D%5B%5D=4&UserInvoice%5Bcost%5D%5B%5D=7'
+    'HTTP_COOKIE' => '_csrf-backend=c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG%22%3B%7D; advanced-backend=taqh767hs8pnvdko3p50rhc63m; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '57969'
+    'REDIRECT_URL' => '/user-invoice/one'
+    'REDIRECT_QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'REQUEST_URI' => '/user-invoice/one?a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519528633.075
+    'REQUEST_TIME' => 1519528633
+]
+2018-02-25 11:23:19 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: c_name in C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php:561
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(561): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\Apache24\\htd...', 561, Array)
+#1 [internal function]: backend\controllers\UserInvoiceController->actionOne()
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('one', Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/on...', Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2018-02-25 11:23:19 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][info][application] $_GET = [
+    'a' => [
+        'id' => '176'
+        'UserInvoice' => [
+            'year' => '2018'
+            'month' => [
+                0 => '4'
+                1 => '12'
+            ]
+            'cost' => [
+                0 => '4'
+                1 => '7'
+            ]
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG\";}'
+    'advanced-backend' => 'taqh767hs8pnvdko3p50rhc63m'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/one'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/v?id=176&UserInvoice%5Byear%5D=&UserInvoice%5Byear%5D=2018&UserInvoice%5Bmonth%5D=&UserInvoice%5Bmonth%5D%5B%5D=4&UserInvoice%5Bmonth%5D%5B%5D=12&UserInvoice%5Bcost%5D=&UserInvoice%5Bcost%5D%5B%5D=4&UserInvoice%5Bcost%5D%5B%5D=7'
+    'HTTP_COOKIE' => '_csrf-backend=c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG%22%3B%7D; advanced-backend=taqh767hs8pnvdko3p50rhc63m; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '58103'
+    'REDIRECT_URL' => '/user-invoice/one'
+    'REDIRECT_QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'REQUEST_URI' => '/user-invoice/one?a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519528999.165
+    'REQUEST_TIME' => 1519528999
+]
+2018-02-25 11:23:28 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: query in C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php:570
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(570): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\Apache24\\htd...', 570, Array)
+#1 [internal function]: backend\controllers\UserInvoiceController->actionOne()
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('one', Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/on...', Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2018-02-25 11:23:28 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][info][application] $_GET = [
+    'a' => [
+        'id' => '176'
+        'UserInvoice' => [
+            'year' => '2018'
+            'month' => [
+                0 => '4'
+                1 => '12'
+            ]
+            'cost' => [
+                0 => '4'
+                1 => '7'
+            ]
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG\";}'
+    'advanced-backend' => 'taqh767hs8pnvdko3p50rhc63m'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/one'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/v?id=176&UserInvoice%5Byear%5D=&UserInvoice%5Byear%5D=2018&UserInvoice%5Bmonth%5D=&UserInvoice%5Bmonth%5D%5B%5D=4&UserInvoice%5Bmonth%5D%5B%5D=12&UserInvoice%5Bcost%5D=&UserInvoice%5Bcost%5D%5B%5D=4&UserInvoice%5Bcost%5D%5B%5D=7'
+    'HTTP_COOKIE' => '_csrf-backend=c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG%22%3B%7D; advanced-backend=taqh767hs8pnvdko3p50rhc63m; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '58121'
+    'REDIRECT_URL' => '/user-invoice/one'
+    'REDIRECT_QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'REQUEST_URI' => '/user-invoice/one?a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519529008.417
+    'REQUEST_TIME' => 1519529008
+]
+2018-02-25 11:25:54 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: cost_id in C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php:568
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(568): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\Apache24\\htd...', 568, Array)
+#1 [internal function]: backend\controllers\UserInvoiceController->actionOne()
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('one', Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/on...', Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2018-02-25 11:25:54 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][info][application] $_GET = [
+    'a' => [
+        'id' => '176'
+        'UserInvoice' => [
+            'year' => '2018'
+            'month' => [
+                0 => '4'
+                1 => '12'
+            ]
+            'cost' => [
+                0 => '4'
+                1 => '7'
+            ]
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG\";}'
+    'advanced-backend' => 'taqh767hs8pnvdko3p50rhc63m'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/one'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/v?id=176&UserInvoice%5Byear%5D=&UserInvoice%5Byear%5D=2018&UserInvoice%5Bmonth%5D=&UserInvoice%5Bmonth%5D%5B%5D=4&UserInvoice%5Bmonth%5D%5B%5D=12&UserInvoice%5Bcost%5D=&UserInvoice%5Bcost%5D%5B%5D=4&UserInvoice%5Bcost%5D%5B%5D=7'
+    'HTTP_COOKIE' => '_csrf-backend=c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG%22%3B%7D; advanced-backend=taqh767hs8pnvdko3p50rhc63m; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '58143'
+    'REDIRECT_URL' => '/user-invoice/one'
+    'REDIRECT_QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'REQUEST_URI' => '/user-invoice/one?a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519529154.212
+    'REQUEST_TIME' => 1519529154
+]
+2018-02-25 11:27:35 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: acreage in C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php:573
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(573): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\Apache24\\htd...', 573, Array)
+#1 [internal function]: backend\controllers\UserInvoiceController->actionOne()
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('one', Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/on...', Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2018-02-25 11:27:35 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][info][application] $_GET = [
+    'a' => [
+        'id' => '176'
+        'UserInvoice' => [
+            'year' => '2018'
+            'month' => [
+                0 => '4'
+                1 => '12'
+            ]
+            'cost' => [
+                0 => '4'
+                1 => '7'
+            ]
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG\";}'
+    'advanced-backend' => 'taqh767hs8pnvdko3p50rhc63m'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/one'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/v?id=176&UserInvoice%5Byear%5D=&UserInvoice%5Byear%5D=2018&UserInvoice%5Bmonth%5D=&UserInvoice%5Bmonth%5D%5B%5D=4&UserInvoice%5Bmonth%5D%5B%5D=12&UserInvoice%5Bcost%5D=&UserInvoice%5Bcost%5D%5B%5D=4&UserInvoice%5Bcost%5D%5B%5D=7'
+    'HTTP_COOKIE' => '_csrf-backend=c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG%22%3B%7D; advanced-backend=taqh767hs8pnvdko3p50rhc63m; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '58181'
+    'REDIRECT_URL' => '/user-invoice/one'
+    'REDIRECT_QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'REQUEST_URI' => '/user-invoice/one?a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519529255.046
+    'REQUEST_TIME' => 1519529255
+]
+2018-02-25 11:28:13 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: price in C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php:574
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(574): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\Apache24\\htd...', 574, Array)
+#1 [internal function]: backend\controllers\UserInvoiceController->actionOne()
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('one', Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/on...', Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2018-02-25 11:28:13 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][info][application] $_GET = [
+    'a' => [
+        'id' => '176'
+        'UserInvoice' => [
+            'year' => '2018'
+            'month' => [
+                0 => '4'
+                1 => '12'
+            ]
+            'cost' => [
+                0 => '4'
+                1 => '7'
+            ]
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG\";}'
+    'advanced-backend' => 'taqh767hs8pnvdko3p50rhc63m'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/one'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/v?id=176&UserInvoice%5Byear%5D=&UserInvoice%5Byear%5D=2018&UserInvoice%5Bmonth%5D=&UserInvoice%5Bmonth%5D%5B%5D=4&UserInvoice%5Bmonth%5D%5B%5D=12&UserInvoice%5Bcost%5D=&UserInvoice%5Bcost%5D%5B%5D=4&UserInvoice%5Bcost%5D%5B%5D=7'
+    'HTTP_COOKIE' => '_csrf-backend=c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG%22%3B%7D; advanced-backend=taqh767hs8pnvdko3p50rhc63m; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '58200'
+    'REDIRECT_URL' => '/user-invoice/one'
+    'REDIRECT_QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'REQUEST_URI' => '/user-invoice/one?a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519529293.214
+    'REQUEST_TIME' => 1519529293
+]
+2018-02-25 11:29:17 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: i in C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php:585
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(585): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\Apache24\\htd...', 585, Array)
+#1 [internal function]: backend\controllers\UserInvoiceController->actionOne()
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('one', Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/on...', Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2018-02-25 11:29:16 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][info][application] $_GET = [
+    'a' => [
+        'id' => '176'
+        'UserInvoice' => [
+            'year' => '2018'
+            'month' => [
+                0 => '4'
+                1 => '12'
+            ]
+            'cost' => [
+                0 => '4'
+                1 => '7'
+            ]
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG\";}'
+    'advanced-backend' => 'taqh767hs8pnvdko3p50rhc63m'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/one'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/v?id=176&UserInvoice%5Byear%5D=&UserInvoice%5Byear%5D=2018&UserInvoice%5Bmonth%5D=&UserInvoice%5Bmonth%5D%5B%5D=4&UserInvoice%5Bmonth%5D%5B%5D=12&UserInvoice%5Bcost%5D=&UserInvoice%5Bcost%5D%5B%5D=4&UserInvoice%5Bcost%5D%5B%5D=7'
+    'HTTP_COOKIE' => '_csrf-backend=c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG%22%3B%7D; advanced-backend=taqh767hs8pnvdko3p50rhc63m; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '58231'
+    'REDIRECT_URL' => '/user-invoice/one'
+    'REDIRECT_QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'REQUEST_URI' => '/user-invoice/one?a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519529356.97
+    'REQUEST_TIME' => 1519529356
+]
+2018-02-25 11:30:50 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: i in C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php:591
+Stack trace:
+#0 C:\Apache24\htdocs\new\backend\controllers\UserInvoiceController.php(591): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\Apache24\\htd...', 591, Array)
+#1 [internal function]: backend\controllers\UserInvoiceController->actionOne()
+#2 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('one', Array)
+#5 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user-invoice/on...', Array)
+#6 C:\Apache24\htdocs\new\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\Apache24\htdocs\new\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2018-02-25 11:30:50 [127.0.0.1][64][taqh767hs8pnvdko3p50rhc63m][info][application] $_GET = [
+    'a' => [
+        'id' => '176'
+        'UserInvoice' => [
+            'year' => '2018'
+            'month' => [
+                0 => '4'
+                1 => '12'
+            ]
+            'cost' => [
+                0 => '4'
+                1 => '7'
+            ]
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG\";}'
+    'advanced-backend' => 'taqh767hs8pnvdko3p50rhc63m'
+    '_identity-backend' => '8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a:2:{i:0;s:17:\"_identity-backend\";i:1;s:15:\"[\"64\",null,900]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '64'
+    'user' => common\models\User#1
+    (
+        [yii\db\BaseActiveRecord:_attributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_oldAttributes] => [
+            'id' => 64
+            'company' => 0
+            'community' => null
+            'real_name' => ''
+            'name' => 'admin'
+            'role' => 1
+            'phone' => 0
+            'password' => '123456'
+            'status' => 1
+            'comment' => ''
+            'salt' => '5478b9127088335dd7b14adcc80f28c4'
+            'create_id' => 0
+            'create_time' => '2016-05-21 00:00:00'
+            'update_time' => '0000-00-00 00:00:00'
+            'update_id' => null
+            'new_pd' => 'e10adc3949ba59abbe56e057f20f883e'
+            'authKey' => null
+        ]
+        [yii\db\BaseActiveRecord:_related] => []
+        [yii\db\BaseActiveRecord:_relationsDependencies] => []
+        [yii\base\Model:_errors] => null
+        [yii\base\Model:_validators] => null
+        [yii\base\Model:_scenario] => 'default'
+        [yii\base\Component:_events] => []
+        [yii\base\Component:_eventWildcards] => []
+        [yii\base\Component:_behaviors] => []
+    )
+]
+
+$_SERVER = [
+    'REDIRECT_PATH_INFO' => 'user-invoice/one'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.wuye.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.wuye.com/user-invoice/v?id=176&UserInvoice%5Byear%5D=&UserInvoice%5Byear%5D=2018&UserInvoice%5Bmonth%5D=&UserInvoice%5Bmonth%5D%5B%5D=4&UserInvoice%5Bmonth%5D%5B%5D=12&UserInvoice%5Bcost%5D=&UserInvoice%5Bcost%5D%5B%5D=4&UserInvoice%5Bcost%5D%5B%5D=7'
+    'HTTP_COOKIE' => '_csrf-backend=c65ba9704d8e8bcd58efdbeede758b827d48095078ce22cb7ef8c1e1b8cc29bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ddLs7uucRMyuwvBQ2I9JUkzOWvouVFTG%22%3B%7D; advanced-backend=taqh767hs8pnvdko3p50rhc63m; _identity-backend=8c803972db3bef3805f3e0cd4b455f633f5a4ff87de6b6f5a009d5c1be6b0c49a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A15%3A%22%5B%2264%22%2Cnull%2C900%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Java\\jdk1.8.0_91\\bin;C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\bin;C:\\Program Files\\Java\\gradle-3.5/bin;C:\\Program Files\\Git\\cmd;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Apache24\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win64) PHP/7.1.4'
+    'SERVER_NAME' => 'www.wuye.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Apache24/htdocs/new/backend/web'
+    'SERVER_ADMIN' => '8052935015@qq.com'
+    'SCRIPT_FILENAME' => 'C:/Apache24/htdocs/new/backend/web/index.php'
+    'REMOTE_PORT' => '58310'
+    'REDIRECT_URL' => '/user-invoice/one'
+    'REDIRECT_QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'REQUEST_URI' => '/user-invoice/one?a%5Bid%5D=176&a%5BUserInvoice%5D%5Byear%5D=2018&a%5BUserInvoice%5D%5Bmonth%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bmonth%5D%5B1%5D=12&a%5BUserInvoice%5D%5Bcost%5D%5B0%5D=4&a%5BUserInvoice%5D%5Bcost%5D%5B1%5D=7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519529450.004
+    'REQUEST_TIME' => 1519529450
+]

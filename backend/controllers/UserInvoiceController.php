@@ -511,10 +511,10 @@ class UserInvoiceController extends Controller {
 		$i = Yii::$app->request->get();
 		
 		foreach ( $i as $b );
-		$id = $i[ 'id' ];
+		$id = $i[ 'id' ]; //房屋编号
 		$y = $b[ 'year' ];
 		$m = $b[ 'month' ];
-		$cost = $b[ 'cost' ];//print_r($cost);exit;
+		$cost = $b[ 'cost' ];
 
 		$query = ( new\ yii\ db\ Query() )->select( [
 				'community_basic.community_name',
@@ -528,75 +528,64 @@ class UserInvoiceController extends Controller {
 				'cost_name.parent',
 				'cost_name.price',
 			] )->from( 'cost_relation' )->join( 'left join', 'community_realestate', 'cost_relation.realestate_id = community_realestate.realestate_id' )->join( 'left join', 'community_building', 'community_building.building_id = community_realestate.building_id' )->join( 'left join', 'community_basic', 'community_basic.community_id = community_realestate.community_id' )->join( 'left join', 'cost_name', 'cost_relation.cost_id = cost_name.cost_id' )->where( [ 'cost_relation.realestate_id' => $id, 'cost_name.cost_id' => $cost ] )
-			//->limit(20)
 			->all();
-		$cost = CostName::find()->select('cost_name,cost_id')->where(['level' => 0])->asArray()->all();
-		$c_name = ArrayHelper::map($cost,'cost_id','cost_name');
-
+		
 		return $this->render( 'v', [
 			'query' => $query,
 			'i' => $i,
 			'y' => $y,
 			'm' => $m,
-			'c_name' => $c_name
 		] );
 	}
 
 	//单个房号批量生成费项
-	public function actionOne() {
-		$a = $_GET;
-		$name = $a['c_name'];
-		foreach ( $a as $b );
-		foreach ( $b as $c );
-		$id = $a['a']['id']; // 生成费项房号的编号（realestate_id）
+	public function actionOne() 
+	{
+		$a = $_GET; // 接收预览页面传过来的数据
+		foreach ( $a as $b ); //过滤数组
+		foreach ( $b as $c ); //过滤数组
+		$id = $a['a']['id']; // 需要生成费项房号的编号（realestate_id）
 		$y = $a['a']['UserInvoice'][ 'year' ]; //生成费项年份
-		$m = $a['a']['UserInvoice'][ 'month' ];//生成费项的月份
-		$CO = $a[ 'a' ][ 'UserInvoice' ][ 'cost' ]; // 生成费项的编码
-
+		$m = $a['a']['UserInvoice'][ 'month' ]; //生成费项的月份
+		$co = $a[ 'a' ][ 'UserInvoice' ][ 'cost' ]; // 生成费项的编码
+		$j = 0; //设置生成费用默认值
+		$h = 0; //设置失败生成费用默认值
+		$i = $j+$h; //合计生成的条数
+		//查询房屋信息
+		$r = CommunityRealestate::find()->select('community_id,building_id,acreage')->asArray()->one();
+		$community = $r[ 'community_id' ];//小区编号
+		$building = $r[ 'building_id' ];//楼宇编号
+		$f = date( time() ); //生成时间
+		
+		//查询费项信息
+		$query = CostName::find()->select('cost_id,cost_name,price')->where(['in','cost_id',$co])->asArray()->all();
+		
 		foreach ( $m as $ms ) {
-			$query = ( new\ yii\ db\ Query() )->select( [
-				'community_realestate.community_id',
-				'community_realestate.building_id',
-				'community_realestate.acreage',
-				'cost_relation.realestate_id',
-				'cost_relation.cost_id',
-				'cost_name.cost_name',
-				'cost_name.parent',
-				'cost_name.price',
-			] )->from( 'cost_relation' )->join( 'left join', 'community_realestate', 'cost_relation.realestate_id = community_realestate.realestate_id' )->join( 'left join', 'community_building', 'community_building.building_id = community_realestate.building_id' )->join( 'left join', 'community_basic', 'community_basic.community_id = community_realestate.community_id' )->join( 'left join', 'cost_name', 'cost_relation.cost_id = cost_name.cost_id' )->where( [ 'cost_relation.realestate_id' => $id, 'cost_name.cost_id' => $CO ] )->all();
-			$f = date( time() );
-			$j = 0; //成功插入数据条数
-			$h = 0; //失败条数
-			$i = count( $query );
-
 			foreach ( $query as $q ) {
-				$community = $q[ 'community_id' ];
-				$building = $q[ 'building_id' ];
-				$realestate = $q[ 'realestate_id' ];
-				$cost = $q[ 'cost_id' ];
-				$description = $q[ 'cost_name' ];
-				$d = $y . "年" . $ms . "月份" . $description; //print_r($d);die;
-				$price = $q[ 'price' ];
-				$acreage = $q[ 'acreage' ];
+				$c_id = $q['cost_id']; //费项编码，将来会用到
+				$description = $q[ 'cost_name' ];//费项名称
+				$d = $y . "年" . $ms . "月份" . $description;//重组费项详情，不日将不再需要			
+				$acreage = $r[ 'acreage' ]; //面积
+				$price = $q[ 'price' ]; //费项价格
+				
 				if ( $description == "物业费" ) {
-					$price = $price * $acreage;
-					$sql = "insert ignore into user_invoice(community_id,building_id,realestate_id,description, year, month, invoice_amount,create_time,invoice_status)
-						values ('$community','$building', '$realestate','$description', '$y', '$ms', '$price','$f','0')";
-					$result = Yii::$app->db->createCommand( $sql )->execute();
-				} else {
-					$sql = "insert ignore into user_invoice(community_id,building_id,realestate_id,description, year, month, invoice_amount,create_time,invoice_status)
-						values ('$community','$building', '$realestate','$description', '$y', '$ms', '$price','$f','0')";
-					$result = Yii::$app->db->createCommand( $sql )->execute();
+					$price = $price * $acreage; //判定物业费
 				}
-
-				if ( $result ) {
-					$j <= count( $query );
-					$j += 1;
-				} else {
-					$h <= count( $query );
-					$h += 1;
-				}
-			}
+				
+				//MySQL插入语句
+				$sql = "insert ignore into user_invoice(community_id,building_id,realestate_id,description, year, month, invoice_amount,create_time,invoice_status)
+						values ('$community','$building', '$id','$description', '$y', '$ms', '$price','$f','0')";
+				$e = Yii::$app->db->createCommand( $sql )->execute();
+				
+				//插入条数计数器
+				if ($e) {
+				    $j <= $i;
+			    	$j += 1;
+			    } else {
+			    	$h <= $i;
+			    	$h += 1;
+			    }
+            }	
 		}
 
 		$con = "成功生成缴费记录" . $j . "条！-  失败：" . $h . "条 - 合计：" . $i . "条";

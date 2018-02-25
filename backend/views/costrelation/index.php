@@ -81,10 +81,10 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 		],
 
 		[ 'attribute' => 'room_name',
-		 'label' => '单元',
-			'value' => 'r.room_name',
-			'hAlign' => 'center',
-			'width' => 'px'
+		  'label' => '房号',
+		  'value' => 'r.room_name',
+		  'hAlign' => 'center',
+		  'width' => 'px'
 		],
 
 		[ 'attribute' => 'name',

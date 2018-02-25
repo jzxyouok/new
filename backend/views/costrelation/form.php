@@ -5,7 +5,7 @@ use yii\helpers\ArrayHelper;
 use app\models\CostRelation;
 use app\models\CommunityBasic;
 use yii\helpers\Url;
-use kartik\form\ActiveForm;
+use yii\bootstrap\ActiveForm;
 use kartik\depdrop\DepDrop;
 use kartik\select2\Select2;
 use kartik\daterange\DateRangePicker;
@@ -46,25 +46,25 @@ use kartik\daterange\DateRangePicker;
 
 			<div class="row">
 				<div class="col-lg-6">
-					<?= $form->field($model, 'price')->dropDownList($cost,['prompt'=>'请选择','id'=>'costrelation-parent']) ?>
+					<?= $form->field($model, 'price')->dropDownList($cost,['prompt'=>'请选择','id'=>'costrelation-parent'])->label('费项') ?>
 				</div>
 				<div class="col-lg-4">
 					<?= $form->field($model, 'cost_id')->widget(DepDrop::classname(), [
-                'type' => DepDrop::TYPE_SELECT2,
-                'options'=>['id'=>'costrelation-price'],
-	            'select2Options'=>['pluginOptions'=>['allowClear'=>true]],
-                'pluginOptions'=>[
-                    'depends'=>['costrelation-parent'],
-                    'placeholder'=>'请选择...',
-                    'url'=>Url::to(['/costrelation/p'])
-                ]
-            ]); ?>
+                        'type' => DepDrop::TYPE_SELECT2,
+                        'options'=>['id'=>'costrelation-price'],
+	                    'select2Options'=>['pluginOptions'=>['allowClear'=>true]],
+                        'pluginOptions'=>[
+                            'depends'=>['costrelation-parent'],
+                            'placeholder'=>'请选择...',
+                            'url'=>Url::to(['/costrelation/p'])
+                        ]
+                    ])->label('单价') ?>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-6">
 					<?= $form->field($model, 'from', [
-                'addon'=>['prepend'=>['content'=>'<i class="glyphicon glyphicon-calendar"></i>']],
+                //'addon'=>['prepend'=>['content'=>'<i class="glyphicon glyphicon-calendar"></i>']],
                 'options'=>['class'=>'drp-container']])
 	                     ->widget(DateRangePicker::classname(), [
                 'useWithAddon'=>true,

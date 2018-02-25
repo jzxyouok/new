@@ -72,7 +72,7 @@ $this->params['breadcrumbs'][] = '费项预览';
     <tr align="center>
       <td width="500"></td>
       <td width="500"></td>
-		<td><h4><a href="<?=Url::to(['user-invoice/one','a'=>$i,'c_name' => $c_name]) ?>">GOing...</a></h4></td>
+		<td><h4><a href="<?=Url::to(['user-invoice/one','a'=>$i]) ?>">GOing...</a></h4></td>
     </tr>
   </tbody>
 </table>
