@@ -37,7 +37,7 @@ class CommunityRealestate extends \yii\db\ActiveRecord
        return [
              [['community_id', 'building_id', 'room_name', 'room_number', 'owners_name', 'owners_cellphone'], 'required'],
             [['community_id', 'building_id'], 'integer'],
-			[['acreage'], 'number', 'max' => 250],
+			[['acreage'], 'number', 'max' => 350],
 		    [['owners_name'], 'string', 'max' => 4],
             [['room_name', 'room_number'], 'string', 'max' => 5],
             [['owners_cellphone'], 'string', 'max' => 12],

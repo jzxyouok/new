@@ -14,7 +14,7 @@ use yii\helpers\ArrayHelper;
 <div class="cost-name-form">
     
     <?php 
-	   $Array1 = Yii::$app->db->createCommand('select cost_id, cost_name from cost_name where parent =0')->queryAll();
+	   $Array1 = Yii::$app->db->createCommand('select cost_id, cost_name from cost_name where level =0')->queryAll();
 	   $comm = ArrayHelper::map($Array1,'cost_name','cost_name');
 	
 	   $cost_name = CostName::find()->select('cost_name,cost_id')->where(['level' => 0])->asArray()->all();

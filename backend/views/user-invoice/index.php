@@ -247,7 +247,13 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 			 ],],*/
 		[ 'attribute' => 'payment_time',
 			//'group' => true,
-			'format' => [ 'date', 'php:Y-m-d H:m:s' ],
+		    'value' => function($model){
+	        	if(empty($model->payment_time)){
+	        		return '';
+	        	}else{
+	        		return date('Y-m-d H:i:s', $model->payment_time);
+	        	}
+	        },
 			'mergeHeader' => true,
 			'hAlign' => 'center',
 			'width' => '160px'

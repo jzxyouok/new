@@ -308,8 +308,11 @@ class OrderController extends Controller
 		$m = array_sum($in);
 		$n = count($in);
 		
-		$user_id = $_SESSION['user']['community'];                    //小区
-		$user_name = $_SESSION['user']['name'];           //用户名
+		$user_id = $_SESSION['user']['community']; //小区
+		if(empty($user_id)){
+			$user_id = 0;
+		}
+		$user_name = $_SESSION['user']['name']; //用户名
 		
 		return $this->render('add', [
 			    'invoic' => $invoice,
@@ -330,15 +333,15 @@ class OrderController extends Controller
 	{
 		$a = Yii::$app->request->get();
 		
-		foreach($a as $b);
+		foreach($a as $b);//print_r($a);exit;
 		
-		//随机产生12位数订单号，格式为年+月+日+1到9999999随机获取6位数
-		$order_id = date('ymd').str_pad(mt_rand(1, 9999999), 6, '0', STR_PAD_LEFT);
+		//随机产生12位数订单号，格式为年+月+日+1到999999随机获取6位数
+		$order_id = date('ymd').str_pad(mt_rand(1, 999999), 6, '0', STR_PAD_LEFT);
 		$time = date(time());//订单类型
 		$des = '物业相关费用'; //订单描述
 		$phone = $_SESSION['user']['phone'];
 		
-		if($user_id){
+		if($user_id != 0){
 			$transaction = Yii::$app->db->beginTransaction();
 			try{
 				$sql = "insert into order_basic(account_id,order_id,create_time,order_type,description, order_amount)
@@ -363,10 +366,10 @@ class OrderController extends Controller
         }
 			$model = new OrderBasic;
 			$model ->order_id = $order_id;
-        return $this->redirect(['view1',//'model' => $model,
-									 'order_id'=>$order_id]); //跳到支付通道选择页面
+        return $this->redirect(['view1', 'order_id'=>$order_id]); //跳到支付通道选择页面
 		}
-		echo "<script>alert('超级管理员没有收费权限，请返回！')</script>";
+		$m ='非收银员没有收费权限，请返回！';
+		echo "<script> alert('$m');parent.location.href='/user-invoice'; </script>";
 	}
 		
     /**

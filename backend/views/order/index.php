@@ -167,7 +167,13 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 		[ 'attribute' => 'payment_time',
 			'mergeHeader' => true,
 			'label' => '付款时间',
-			'format' => [ 'date', 'php:Y:m:d H:i:s' ],
+		    'value' => function($model){
+		        if(empty($model->payment_time)){
+		        	return '';
+		        }else{
+		                return date('Y-m-d H:i:s', $model->payment_time);
+		        }
+	        },
 			'hAlign' => 'center',
 			'width' => '160px'
 		],
@@ -202,7 +208,7 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 			'hAlign' => 'center'],*/
 		[ 'attribute' => 'status',
 			'value' => 'status0.name',
-			'refreshGrid' => true,
+			//'refreshGrid' => true,
 			'filterType' => GridView::FILTER_SELECT2,
 			'filter' => Status::find()->select( [ 'name', 'order_basic_status' ] )->orderBy( 'name' )->indexBy( 'order_basic_status' )->column(),
 			'filterInputOptions' => [ 'placeholder' => '' ],

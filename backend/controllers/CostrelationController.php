@@ -241,7 +241,7 @@ class CostrelationController extends Controller {
 		$model = new CostRelation();
 		
 		$c = $_SESSION['user']['community'];
-	    $array = Yii::$app->db->createCommand('select cost_id,cost_name from cost_name where parent=0')->queryAll();
+	    $array = Yii::$app->db->createCommand('select cost_id,cost_name from cost_name where level = 0')->queryAll();
 	    $cost = ArrayHelper::map($array,'cost_id','cost_name');
  
 		//获取小区和楼宇编号

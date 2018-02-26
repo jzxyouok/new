@@ -5,7 +5,7 @@ use yii\helpers\ArrayHelper;
 use app\models\CostRelation;
 use app\models\CommunityBasic;
 use yii\helpers\Url;
-use yii\bootstrap\ActiveForm;
+use kartik\form\ActiveForm;
 use kartik\depdrop\DepDrop;
 use kartik\select2\Select2;
 use kartik\daterange\DateRangePicker;
@@ -64,7 +64,7 @@ use kartik\daterange\DateRangePicker;
 			<div class="row">
 				<div class="col-lg-6">
 					<?= $form->field($model, 'from', [
-                //'addon'=>['prepend'=>['content'=>'<i class="glyphicon glyphicon-calendar"></i>']],
+                'addon'=>['prepend'=>['content'=>'<i class="glyphicon glyphicon-calendar"></i>']],
                 'options'=>['class'=>'drp-container']])
 	                     ->widget(DateRangePicker::classname(), [
                 'useWithAddon'=>true,

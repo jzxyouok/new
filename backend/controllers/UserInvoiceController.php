@@ -489,7 +489,7 @@ class UserInvoiceController extends Controller {
 
 		$cost_id = CostRelation::find()->select( 'cost_id' )->where( [ 'realestate_id' => $id ] )->asArray()->all(); //获取关联费项序号（二维数组）
 		$c_id = array_column( $cost_id, 'cost_id' ); //提取关联费项序号
-		$cost_info = CostName::find()->select( 'cost_id, cost_name' )->andwhere(['or not like','cost_name.cost_name',['水费']])->andwhere( [ 'cost_id' => $c_id ] )->asArray()->all();//获取关联费项信息
+		$cost_info = CostName::find()->select( 'cost_id, cost_name' )->andwhere( [ 'in','cost_id', $c_id ] )->asArray()->all();//获取关联费项信息
 		$cost = ArrayHelper::map( $cost_info, 'cost_id', 'cost_name' );// 重组关联费项信息
 
 		if(empty($cost)){
@@ -552,7 +552,7 @@ class UserInvoiceController extends Controller {
 		$h = 0; //设置失败生成费用默认值
 		$i = $j+$h; //合计生成的条数
 		//查询房屋信息
-		$r = CommunityRealestate::find()->select('community_id,building_id,acreage')->asArray()->one();
+		$r = CommunityRealestate::find()->select('community_id,building_id,acreage')->where(['realestate_id' => $id])->asArray()->one();
 		$community = $r[ 'community_id' ];//小区编号
 		$building = $r[ 'building_id' ];//楼宇编号
 		$f = date( time() ); //生成时间
