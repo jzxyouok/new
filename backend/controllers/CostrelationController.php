@@ -306,7 +306,7 @@ class CostrelationController extends Controller {
 		//获取楼宇
 		$b_info = CommunityBuilding::find()->select('building_name,building_id')->where(['building_id' => $r_id['building_id']])->asArray()->all();
 		
-		$array = Yii::$app->db->createCommand('select cost_id,cost_name from cost_name where parent=0')->queryAll();
+		$array = Yii::$app->db->createCommand('select cost_id,cost_name from cost_name where level = 0')->queryAll();
 	    $cost = ArrayHelper::map($array,'cost_id','cost_name');
 		
 		//获取房屋相关信息

@@ -118,14 +118,13 @@ class SysuserController extends Controller
 		$pd = SysUser::find()->select('new_pd')->where(['id'=> $id])->asArray()->one();
 		
 		$password = $_POST['SysUser']['password'];// 传递过来的密码
-		$new = $_POST['SysUser']['new'];//传递过来的新密码
+		$new = $_POST['SysUser']['n'];//传递过来的新密码
 		$p = md5($password); // 经过md5加密旧密码
 		$n = md5($new); // 经过md5加密新密码
 		
 		if($pd['new_pd'] == $p){
 			Sysuser::updateAll(['new_pd' => $n],'id = :id',[':id' => $id]);
-			echo "<script>alert('密码修改成功！')</script>";
-			return $this->render('/site/index');
+			echo "<script>alert('密码修改成功！');parent.location.href='/site';</script>";
 		}else{
 			$session->setFlash('fail','1');
 			return $this->redirect(Yii::$app->request->referrer);

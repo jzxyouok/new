@@ -166,7 +166,8 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 			},
 			'hAlign' => 'center',
 			'width' => '70px'
-		], [ 'attribute' => 'month',
+		],
+		[ 'attribute' => 'month',
 			'value' => function ( $model ) {
 				$t = explode( '年', $model->description );
 				$str = end( $t );

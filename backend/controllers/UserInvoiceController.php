@@ -452,7 +452,8 @@ class UserInvoiceController extends Controller {
 			$acreage = $q[ 'acreage' ];
 						
 			if ( $description == "物业费" ) {
-				$price = $price * $acreage;
+				$p = $price*$acreage;
+				$price = number_format($p, 1);
 				$sql = "insert ignore into user_invoice(community_id,building_id,realestate_id,description, year, month, invoice_amount,create_time,invoice_status)
 				values ('$community','$building', '$realestate','$description', '$y', '$m', '$price','$f','0')";
 				$result = Yii::$app->db->createCommand( $sql )->execute();
@@ -569,7 +570,9 @@ class UserInvoiceController extends Controller {
 				$price = $q[ 'price' ]; //费项价格
 				
 				if ( $description == "物业费" ) {
-					$price = $price * $acreage; //判定物业费
+					//判定物业费
+					$p = $price*$acreage;
+				    $price = number_format($p, 1);
 				}
 				
 				//MySQL插入语句

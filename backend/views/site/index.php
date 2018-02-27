@@ -47,6 +47,6 @@ $this->title = '裕达物业';
 	}
    echo "<br />";
    echo "<h5>您的登录地址是：<h>$a</h></h5>";
-	print_r($_SESSION['user']);
+	//print_r($_SESSION['user']);
 ?>
 </div>
