@@ -116,6 +116,7 @@ class CommunityRealestateController extends Controller
 					
 					//获取小区
 					$c_id = CommunityBasic::find()->select( 'community_id' )->where( [ 'community_name' => $sheet[ 'A' ] ] )->asArray()->one();
+					
 					if(empty($comm)){
 						//管理员账号操作
 						if($c_id){
@@ -174,12 +175,12 @@ class CommunityRealestateController extends Controller
 					    }
 					}else{
 						//前台账户操作
-					    if($c_id && $c_id == $comm['community_id']){
+					    if($c_id && $c_id['community_id'] == $comm){
 					    	//获取楼宇
 					    	$b_id = CommunityBuilding::find()->select( [ 'building_id' ] )
 					    			->andwhere( [ 'community_building.building_name' => $sheet[ 'B' ] ] )
 					    			->andwhere(['community_id' => $c_id['community_id']])->asArray()->one();
-					    	if($b_id){    
+					    	if($b_id){
 							    //获取房屋编号
 							    $r_id = CommunityRealestate::find()->select( [ 'realestate_id' ] )
                                     ->andwhere(['community_id' => $c_id['community_id']])
@@ -197,7 +198,7 @@ class CommunityRealestateController extends Controller
 			                        	$h <= $i;
 			                        	$h += 1;
 			                        }
-							    }elseif(!empty($c_id) && !empty($b_id)){
+							    }/*elseif(!empty($c_id) && !empty($b_id) && $comm == $c_id){
 							    	//插入新记录
 							    	$model = new CommunityRealestate();
 							    	$model->community_id = (int)$c_id['community_id']; //小区
@@ -216,7 +217,7 @@ class CommunityRealestateController extends Controller
 							    		$c <= $i;
 							    		$c += 1;
 							    	}
-							    }else{
+							    }*/else{
 							    	$c += 1;
 							    	continue;
 							    }

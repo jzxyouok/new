@@ -90,29 +90,30 @@ class OrderController extends Controller
 	//打印信息
 	public function actionPrint($order_id)
 	{
+		$session = Yii::$app->session;
+		$user_id = $_SESSION['user']['community']; //小区
+		$user_name = $_SESSION['user']['name']; //用户名
+		
+		//获取订单信息
 		$order = OrderBasic::find()
 			->select('order_id,payment_time,payment_gateway')
 			->where(['order_id' => $order_id])
 			->asArray()
 			->one();
-		$session = Yii::$app->session;
+		 
 		if($order['payment_time'] || $order['payment_gateway']){
 			//查询缴费费项信息
-			$invoice = UserInvoice::find()
-				->select('community_id,building_id,realestate_id,description,year,month,invoice_amount')
-				->where(['order_id' => $order_id])
-				->asArray()
-				->all();
+			$i = UserInvoice::find()->select('community_id,building_id,realestate_id,description,year,month,invoice_amount')->where(['order_id'=>$order_id]);
+			$invoice = $i->asArray()->all();
 			
 		    $in = array_column($invoice, 'invoice_amount');// 选择费项金额列
+		    $de = array_column($invoice, 'description');// 选择费详情列
 		    $m = array_sum($in);  //费项总和
 		    $n = count($in); //费项条数
-			
-		    $user_id = $_SESSION['user']['community'];                    //小区
-		    $user_name = $_SESSION['user']['name'];           //用户名
-			
+						
 			if($invoice){
-				foreach($invoice as $inv);
+				$inv = $i->asArray()->one();
+				//查询小区
 				$comm = CommunityBasic::find()
 					->select('community_name')
 					->where(['community_id' => $inv['community_id']])

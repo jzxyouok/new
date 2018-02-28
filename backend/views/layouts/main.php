@@ -89,7 +89,7 @@ AppAsset::register($this);
     <div class="container">
         <p class="pull-left">&copy; 裕达物业 <?= date('Y') ?></p>
 
-        <p class="pull-right"><a href="http://www.gxydwy.com">网络技术部</a></p>
+        <p class="pull-right"><a href="http://www.gxydwy.com">裕家人 2.0</a></p>
     </div>
 </footer>
 

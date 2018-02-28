@@ -43,10 +43,10 @@ class CommunityBuilding extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'building_id' => 'Building ID',
+            'building_id' => '编号',
             'community_id' => '小区',
             'building_name' => '楼宇',
-            'building_parent' => 'Building Parent',
+            'building_parent' => '父级',
         ];
     }
 
@@ -56,5 +56,10 @@ class CommunityBuilding extends \yii\db\ActiveRecord
     public function getUserInvoices()
     {
         return $this->hasMany(UserInvoice::className(), ['building_id' => 'building_id']);
+    }
+	
+	public function getC()
+    {
+        return $this->hasOne(CommunityBasic::className(), ['community_id' => 'community_id']);
     }
 }
