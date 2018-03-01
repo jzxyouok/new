@@ -96,7 +96,7 @@ class OrderController extends Controller
 		
 		//获取订单信息
 		$order = OrderBasic::find()
-			->select('order_id,payment_time,payment_gateway')
+			->select('order_id,payment_time,payment_gateway,payment_time')
 			->where(['order_id' => $order_id])
 			->asArray()
 			->one();
@@ -108,9 +108,10 @@ class OrderController extends Controller
 			
 		    $in = array_column($invoice, 'invoice_amount');// 选择费项金额列
 		    $de = array_column($invoice, 'description');// 选择费详情列
-		    $m = array_sum($in);  //费项总和
+		    $i_a = array_sum($in);  //费项总和
 		    $n = count($in); //费项条数
-						
+			$dc = array_unique($de);//去重复
+									
 			if($invoice){
 				$inv = $i->asArray()->one();
 				//查询小区
@@ -128,18 +129,19 @@ class OrderController extends Controller
 					->one();
 				//查询房屋单元及房号
 				$r_name = CommunityRealestate::find()
-					->select('room_name as name,room_number as number')
+					->select('room_name as name, realestate_id as id, room_number as number, owners_name as n')
 					->where(['realestate_id' => $inv['realestate_id']])
 					->asArray()
 					->one();
 				$e = [ 1 => '支付宝', 2 => '微信', 3 => '刷卡', 4 => '银行', '5' => '政府', 6 => '现金' ];
 				return $this->render('print',[
-			                      'invoic' => $invoice,
+			                      'dc' => $dc,
 			                      'comm' => $comm,
 			                      'building' => $building,
 			                      'r_name' => $r_name,
+					              'order_id' => $order_id,
 			                      'n' => $n,
-			                      'm'=> $m,
+			                      'i_a'=> $i_a,
 					              'e' => $e,
 					              'order' => $order,
 			                      'user_id' => $user_id,

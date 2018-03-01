@@ -434,7 +434,7 @@ class UserInvoiceController extends Controller {
 		
 		$y = date( 'Y' );
 		$m = date( 'm' );
-		$m += 0;
+		//$m += 0;
 		$f = date( time() );
 		$a = 0;
 		$b = 0;
@@ -485,7 +485,7 @@ class UserInvoiceController extends Controller {
 		$i = 1;
 		$w = date( 'Y' );
 		$y = [ $w - $i * 2 => $w - $i * 2, $w - $i => $w - $i, $w => $w, $w + 1 => $w + 1, $w + 2 => $w + 2, ];
-		$m = [ 1 => '1', 2 => '2', 3 => '3', 4 => '4', 5 => '5', 6 => '6', 7 => '7', 8 => '8', 9 => '9', 10 => 10, 11 => 11, 12 => 12 ];
+		$m = [ '01' => '1', '02' => '2', '03' => '3', '04' => '4', '05' => '5', '06' => '6', '07' => '7', '08' => '8', '09' => '9', 10 => 10, 11 => 11, 12 => 12 ];
 		$model->id = $id;
 
 		$cost_id = CostRelation::find()->select( 'cost_id' )->where( [ 'realestate_id' => $id ] )->asArray()->all(); //获取关联费项序号（二维数组）
