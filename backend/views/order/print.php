@@ -83,9 +83,14 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 			    	$des = $ds->asArray()->All();
 					
 					$c_id = CostRelation::find()->select('cost_id')->where(['realestate_id' => $r_name['id']])->asArray()->all();
-	                $cost = CostName::find()->select('price')->andwhere(['cost_name' => $c])->andwhere(['in', 'cost_id', $c_id])->asArray()->one();
-					foreach($cost as $name);
-					
+	                
+					if(!empty($c_id)){
+						$cost = CostName::find()->select('price')->andwhere(['cost_name' => $c])->andwhere(['in', 'cost_id', $c_id])->asArray()->one();
+						foreach($cost as $name);
+					}else{
+						echo "<script>alert('数据有误，请返回！')</script>";exit;
+					}
+										
 	                $k ++;//记录遍历次数
 					$y = $ds->min('year'); // 最小年
 					$Y = $ds->max('year'); // 最大年

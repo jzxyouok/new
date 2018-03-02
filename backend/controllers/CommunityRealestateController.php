@@ -134,7 +134,7 @@ class CommunityRealestateController extends Controller
                                     ->one();
 						    	if(!empty($r_id)){
 						    		//更新数据库记录
-						     		$d = CommunityRealestate::updateAll(['acreage' => $sheet[ 'G' ]], 'realestate_id = :id',[':id' => $r_id['realestate_id']]);
+						     		$d = CommunityRealestate::updateAll(['acreage' => (float)$sheet[ 'G' ]], 'realestate_id = :id',[':id' => $r_id['realestate_id']]);
 						    		if ( $d ) {
 			                        	$a <= $i;
 			                        	$a += 1;
@@ -151,7 +151,7 @@ class CommunityRealestateController extends Controller
 						    		$model->room_name = $sheet['D'];//房号
 						    		$model->owners_name = $sheet['E'];
 						    		$model->owners_cellphone = (int)$sheet['F'];//手机号码
-						    		$model->acreage = (int)$sheet['G'];
+						    		$model->acreage = (float)$sheet['G'];
 						    					
 						    		$e = $model->save(); //保存
 						    		if( $e ){
@@ -175,7 +175,7 @@ class CommunityRealestateController extends Controller
 					    }
 					}else{
 						//前台账户操作
-					    if($c_id && $c_id['community_id'] == $comm){
+					    if($c_id && $c_id['community_id'] == $comm){ 
 					    	//获取楼宇
 					    	$b_id = CommunityBuilding::find()->select( [ 'building_id' ] )
 					    			->andwhere( [ 'community_building.building_name' => $sheet[ 'B' ] ] )
@@ -190,7 +190,7 @@ class CommunityRealestateController extends Controller
                                     ->one();
 							    if(!empty($r_id)){
 							    	//更新数据库记录
-							    	$d = CommunityRealestate::updateAll(['acreage' => $sheet[ 'G' ]], 'realestate_id = :id',[':id' => $r_id['realestate_id']]);
+							    	$d = CommunityRealestate::updateAll(['acreage' => (float)$sheet[ 'G' ]], 'realestate_id = :id',[':id' => $r_id['realestate_id']]);
 							    	if ( $d ) {
 			                        	$a <= $i;
 			                        	$a += 1;
@@ -198,7 +198,8 @@ class CommunityRealestateController extends Controller
 			                        	$h <= $i;
 			                        	$h += 1;
 			                        }
-							    }/*elseif(!empty($c_id) && !empty($b_id) && $comm == $c_id){
+							    }/*elseif(!empty($c_id) && !empty($b_id) && $comm == $c_id['community_id']){
+									
 							    	//插入新记录
 							    	$model = new CommunityRealestate();
 							    	$model->community_id = (int)$c_id['community_id']; //小区
@@ -206,8 +207,8 @@ class CommunityRealestateController extends Controller
 							    	$model->room_number = (int)$sheet['C']; //单元
 							    	$model->room_name = $sheet['D'];//房号
 							    	$model->owners_name = $sheet['E'];
-							    	$model->owners_cellphone = (int)$sheet['F'];//手机号码
-							    	$model->acreage = (int)$sheet['G'];
+							    	$model->owners_cellphone = $sheet['F'];//手机号码
+							    	$model->acreage = (float)$sheet['G'];
 							    				
 							    	$e = $model->save(); //保存
 							    	if( $e ){
