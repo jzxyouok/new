@@ -5,6 +5,7 @@ use yii\ helpers\ Url;
 use app\models\UserInvoice;
 use app\models\CostName;
 use app\models\CostRelation;
+use app\models\WaterMeter;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\UserInvoice */
@@ -39,7 +40,7 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
         	table{
         		text-align: center;
         		margin:auto;
-        		width: 768px;
+        		width: 800px;
         	}
         </style>
         
@@ -72,62 +73,115 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
 					<th>金额</th>
 					<th>备注</th>
 				</tr>
-				<?php 
+				<?php
 				$k = 0;
 				foreach($dc as $key => $c){
 			    	$ds = UserInvoice::find()
 			    		->select('description,year,month,invoice_amount')
 			    		->andwhere(['order_id'=>$order_id])
+						->andwhere(['description' => $c])
 						->andwhere(['realestate_id' => $r_name['id']])
-			    		->andwhere(['description' => $c]);
-			    	$des = $ds->asArray()->All();
+						->orderBy('year,month ASC');
+					$s = $ds->asArray();
+					foreach ($s->batch(100) as $des);
 					
+					//获取绑定水费编码
 					$c_id = CostRelation::find()->select('cost_id')->where(['realestate_id' => $r_name['id']])->asArray()->all();
-	                
+	                //获取绑定费项价格
 					if(!empty($c_id)){
-						$cost = CostName::find()->select('price')->andwhere(['cost_name' => $c])->andwhere(['in', 'cost_id', $c_id])->asArray()->one();
+						$cost = CostName::find()->select('price')->andwhere(['cost_name' => $c])->andwhere(['cost_id' => $c_id])->asArray()->one();
 						foreach($cost as $name);
 					}else{
-						echo "<script>alert('数据有误，请返回！')</script>";exit;
+						$name = '';
 					}
 										
 	                $k ++;//记录遍历次数
+					
 					$y = $ds->min('year'); // 最小年
 					$Y = $ds->max('year'); // 最大年
-					$m = $ds->where(['year' => $y])->asArray()->all(); // 最小月
-					$h = min(array_column($m,'month')); //提取月份
-					$M = $ds->where(['year' => $Y])->asArray()->all();//->max('month'); // 最大月
-					$H = max(array_column($M,'month')); //提取月份
-					$count = count($des);
 					
-			    	$amount = array_sum(array_column($des,'invoice_amount'));
-	                echo ("<tr height=10>
+					$m = reset($des); // 最小月
+					$h = $m['month'];//提取月份
+					$M = end($des); // 最大月
+					$H = $M['month']; //提取月份
+					$count = count($des); //统计数量
+										
+					//$day = cal_days_in_month(CAL_GREGORIAN, $H, $Y); //获取最后月的天数
+					$day = date("t",strtotime("$Y-$H"));
+					
+					//预交信息
+					$ys = date('Y',$order['payment_time']);
+					$ms = date('m',$order['payment_time'])+0;
+										
+					$yj = $ds->andwhere([ '>=', 'year', $ys])
+						->orderBy('year,month ASC')
+						->asArray()
+						->all();
+					
+					$yc = count($yj); //预交数量统计
+					
+					$f = reset($yj); //第一条
+					$l = end($yj); //后一条
+					
+					$yy = $f['year']; //预交起始年
+					$ym = $f['month']; //预交起始月
+					
+					$YS = $l['year']; //预交末年
+					$YM = $l['month']; //预交末月
+					
+			    	$amount = array_sum(array_column($des,'invoice_amount')); //费项金额
+					
+					echo ("<tr height=10>
 	                          <td width = 5%>$k</td>
 							  <td width = 15%>$c</td>
-							  <td width = 10%></td>
-							  <td width = 10%></td>
-							  <td width = 6%>$count </td>
-	                          <td width = 5%>$name</td>
-	                          <td width = 8%>$y/$h</td>
-	                          <td width = 8%>$Y/$H </td>
-	                          <td width = 7% align = right>$amount</td>
-	                          <td>预收:$Y/$H/-$Y/$H</td>
-	                       </tr>
-	                	  ");
+							  ");
+					
+					if($c == '水费'){
+					    //获取费表读数
+					    $readout = WaterMeter::find()
+					    	->select('readout')
+					    	->where(['realestate_id' => $r_name['id']])
+					    	->limit(2)
+					    	->orderBy('year,month DESC')
+					    	->asArray()
+					    	->all();
+					    if($readout){
+							$read = array_column($readout,'readout'); //提取水费读数
+					        $one = reset($read);
+					        $two = end($read);
+					        $d = $one-$two; //水费差值
+						}else{
+							$one = '';
+							$two = '';
+						}
+					    
+					    echo ("
+					            <td width = 9%>$two</td>
+					            <td width = 9%>$one</td>
+					    		<td width = 6%>$d </td>
+					         ");
+					}else{
+						echo ("
+						    <td width = 9%></td>
+						    <td width = 9%></td>
+							<td width = 6%>$count</td>
+						");
+					}
+					echo (" 
+	                        <td width = 5%>$name</td>
+	                        <td width = 9%>$y/$h/1</td>
+	                        <td width = 10%>$Y/$H/$day</td>
+	                        <td width = 7% align = right>$amount</td>
+						  ");
+					if(isset($yy)){
+						echo ("<td>预收:$yy/$ym/-$YS/$YM 共:$yc 条</td></tr>");
+					}else{
+						echo ("<td></td></tr>");
+					}
 			    }?>
 								
 				<tr>
-					<td colspan="7" align="left">
-					<table style="width: 450px;">
-                         <tbody>
-                           <tr style="height: 20px">
-                             <td align="left">合计：   <?php echo $i_a; ?></td>
-							   <td align="right"><?php echo ucwords($i_a) ?></td>
-                           </tr>
-                         </tbody>
-                   </table>
-
-					</td>
+					<td colspan="9" align="right">合计：  &nbsp;&nbsp;&nbsp;<?php echo $i_a; ?></td>
 					<td colspan="3"></td>
 				</tr>
 			</tbody>

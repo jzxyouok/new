@@ -306,7 +306,6 @@ class UserInvoiceController extends Controller {
 			'from' => $from,
 			'to' => $to,
 			'in' => $in,
-			//'invoice' => $invoice,
 		] );
 	}
 

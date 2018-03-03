@@ -64,15 +64,16 @@ use kartik\daterange\DateRangePicker;
 			<div class="row">
 				<div class="col-lg-6">
 					<?= $form->field($model, 'from', [
-                'addon'=>['prepend'=>['content'=>'<i class="glyphicon glyphicon-calendar"></i>']],
-                'options'=>['class'=>'drp-container']])
-	                     ->widget(DateRangePicker::classname(), [
-                'useWithAddon'=>true,
-				'pluginOptions'=>[
-                'singleDatePicker'=>true,
-                'showDropdowns'=>true
-                ]
-            ]) ?>
+                        'addon'=>['prepend'=>['content'=>'<i class="glyphicon glyphicon-calendar"></i>']],
+                        'options'=>['class'=>'drp-container']])
+	                             ->widget(DateRangePicker::classname(), [
+                            'useWithAddon'=>true,
+			            	'pluginOptions'=>[
+                                'singleDatePicker'=>true,
+                                'showDropdowns'=>true,
+							    'useWithAddon'=>true,
+                            ]
+                        ])->textInput(['value' => date('Y-m-d')]) ?>
 				</div>
 			</div>
 			<div class="row">

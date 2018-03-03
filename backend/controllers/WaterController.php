@@ -111,14 +111,17 @@ class WaterController extends Controller
     {
 		$session = Yii::$app->session;
     	$comm = $_SESSION[ 'user' ][ 'community' ];
+		
     	if ( empty( $comm ) ) {
     		$session->setFlash( 'm', '1' );
 			return $this->redirect( [ 'new' ] );
     	} else {
     		$r = CommunityRealestate::find()->select( 'community_id, building_id,realestate_id' )->where( [ 'community_id' => $comm ] );
-			$r_id = $r->asArray()->all();
+			$r_id = $r->limit(4)->asArray()->all();
+			
 			$r_count = $r->count(); //计算房号总数
     		$count = WaterMeter::find()->andwhere( [ 'year' => date( 'Y' ) ] )->andwhere( [ 'month' => date( 'm' ) ] )->count(); //查询水表读数数量
+			
     		if($count != $r_count){
 				foreach ( $r_id as $id ) {
 				$community = $id['community_id'];
@@ -133,19 +136,25 @@ class WaterController extends Controller
     			$y = date( 'Y' );
     			$m = date( 'm' );
     			$p = date( time() );
-    			$m += 0;
-
+    			
     			set_time_limit( 60 );
     			ini_set( 'memory_limit', '512M' ); // 调整PHP由默认占用内存为1024M(1GB)
-
-    			$sql = "insert ignore into water_meter(community,building,realestate_id,year,month,readout,property)values ('$community', '$building', '$realestate_id','$y', '$m', $read,$p)";
-    			$result = Yii::$app->db->createCommand( $sql )->execute();
-    			
+				
+				$model = new WaterMeter;// 实例化模型
+				
+				$model->community = $community;
+				$model->building = $building;
+				$model->realestate_id = $realestate_id;
+				$model->year = $y;
+				$model->month = $m;
+				$model->readout = $read;
+				
+				$model->save(); //保存
     		    }
 			}else{
 				$session->setFlash( 'm', '2' ); //提示重复
 				return $this->redirect(Yii::$app->request->referrer );
-			}	
+			}
     	}
     	return $this->redirect( Yii::$app->request->referrer );//Yii::$app->request->referrer
     }
@@ -162,7 +171,6 @@ class WaterController extends Controller
 		$reale_id = array_column($realestate_id,'realestate_id'); // 提取房屋编号
 
 		$m = date( 'm' );
-		$m += 0;
 
 		//计算当前生成水费数量
 		$water = UserInvoice::find()->andwhere( [ 'year' => date( 'Y' ) ] )->andwhere( [ 'month' => $m ] )->andwhere( [ 'community_id' => $comm ] )->count();
@@ -185,8 +193,7 @@ class WaterController extends Controller
 				$water = WaterMeter::find()->select( 'year,month,readout' )->where( [ 'realestate_id' => $id ] )->limit( 2 ) //->limit(1)
 					->orderBy( 'property' )->asArray()->all();
 
-				//提取近两个月的费表读数
-				$i = array_column( $water, 'readout' );
+				$i = array_column( $water, 'readout' );//提取近两个月的费表读数
 
 				//计算差额
 				$c = end( $i ) - reset( $i );
@@ -213,15 +220,15 @@ class WaterController extends Controller
 				$realestate = $id[ 'realestate_id' ]; // 房屋ID
 
 				//获取年月
-				$i = end( $water ); //后一月的读数信息
-				$y = $i[ 'year' ]; // 年
-				$m = $i[ 'month' ]; // 月
+				$I = end( $water ); //后一月的读数信息
+				$y = $I[ 'year' ]; // 年
+				$M = $I[ 'month' ]; // 月
 				$f = date( time() ); // 创建时间
 
 				$d = $price[ 'cost_name' ]; //$y.'年'.$m.'月份'.
 
 				$sql = "insert ignore into user_invoice(community_id,building_id,realestate_id,description, year, month, invoice_amount,create_time,invoice_status)
-				values ('$community','$building', '$realestate','$d', '$y', '$m', '$mount','$f','0')";
+				values ('$community','$building', '$realestate','$d', '$y', '$M', '$mount','$f','0')";
 				$result = Yii::$app->db->createCommand( $sql )->execute();
 			}
 		}

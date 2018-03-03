@@ -91,8 +91,7 @@ class OrderController extends Controller
 	public function actionPrint($order_id)
 	{
 		$session = Yii::$app->session;
-		$user_id = $_SESSION['user']['community']; //小区
-		$user_name = $_SESSION['user']['name']; //用户名
+		$user_name = $_SESSION['user']['name']; //收款用户名
 		
 		//获取订单信息
 		$order = OrderBasic::find()
@@ -103,13 +102,18 @@ class OrderController extends Controller
 		 
 		if($order['payment_time'] || $order['payment_gateway']){
 			//查询缴费费项信息
-			$i = UserInvoice::find()->select('community_id,building_id,realestate_id,description,year,month,invoice_amount')->where(['order_id'=>$order_id]);
-			$invoice = $i->asArray()->all();
+			$i = UserInvoice::find()
+				->select('community_id,building_id,realestate_id,description,invoice_amount')
+				->where(['order_id'=>$order_id]);
+			//$invoice = $i->asArray()->all();
+			$invoice = UserInvoice::findBySql("select user_invoice.community_id, user_invoice.building_id, user_invoice.description, invoice_amount from user_invoice where order_id = $order_id")->all();
+			
+			foreach ($i->batch() as $invoice);
+			var_dump($invoice);exit;
 			
 		    $in = array_column($invoice, 'invoice_amount');// 选择费项金额列
 		    $de = array_column($invoice, 'description');// 选择费详情列
 		    $i_a = array_sum($in);  //费项总和
-		    $n = count($in); //费项条数
 			$dc = array_unique($de);//去重复
 									
 			if($invoice){
@@ -127,12 +131,14 @@ class OrderController extends Controller
 					->where(['building_id' => $inv['building_id']])
 					->asArray()
 					->one();
+				
 				//查询房屋单元及房号
 				$r_name = CommunityRealestate::find()
 					->select('room_name as name, realestate_id as id, room_number as number, owners_name as n')
 					->where(['realestate_id' => $inv['realestate_id']])
 					->asArray()
 					->one();
+				
 				$e = [ 1 => '支付宝', 2 => '微信', 3 => '刷卡', 4 => '银行', '5' => '政府', 6 => '现金' ];
 				return $this->render('print',[
 			                      'dc' => $dc,
@@ -140,12 +146,11 @@ class OrderController extends Controller
 			                      'building' => $building,
 			                      'r_name' => $r_name,
 					              'order_id' => $order_id,
-			                      'n' => $n,
 			                      'i_a'=> $i_a,
 					              'e' => $e,
 					              'order' => $order,
-			                      'user_id' => $user_id,
-			                      'user_name' => $user_name]);
+			                      'user_name' => $user_name
+				                ]);
 			}else{
 				$session->setFlash('m','1');
 				return $this->redirect(Yii::$app->request->referrer);

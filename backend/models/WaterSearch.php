@@ -69,9 +69,7 @@ class WaterSearch extends WaterMeter
 			->join('inner join','community_building','community_building.building_id = community_realestate.building_id')
 			->groupBy(['water_meter.realestate_id','year']);
 		}else{
-			//查询账号绑定小区的房号编码
-			$r_id = CommunityRealestate::find()->select('realestate_id')->where(['community_id' => $comm])->asArray()->all();
-			$id = array_column($r_id,'realestate_id'); // 提取房屋编码
+			// 提取房屋编码
 			$query = WaterMeter::find();$query = (new \yii\db\Query())->select([
 			    'community_basic.community_name as community','community_building.building_name as building',
 			    'water_meter.year','community_realestate.room_number as number','community_realestate.room_name as name',
@@ -91,7 +89,7 @@ class WaterSearch extends WaterMeter
 			->join('inner join','community_realestate','community_realestate.realestate_id = water_meter.realestate_id')
 			->join('inner join','community_basic','community_basic.community_id = community_realestate.community_id')
 			->join('inner join','community_building','community_building.building_id = community_realestate.building_id')
-			->where(['in', 'water_meter.realestate_id',$id])
+			->where(['water_meter.community' => $comm])
 			->groupBy(['water_meter.realestate_id','year']);
 		}
         
